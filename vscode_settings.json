@@ -1,0 +1,45 @@
+{
+  "window.zoomLevel": -2,
+  "editor.renderWhitespace": "boundary",
+  "editor.codeLens": false,
+  "editor.fontSize": 12,
+  // "editor.tabSize": 4,
+  "editor.tabSize": 2,
+  // "editor.fontFamily": "'FiraCode', 'Droid Sans Mono for Powerline', 'Courier New', monospace, 'Droid Sans Fallback'",
+  // "editor.fontFamily": "Iosevka",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "normal",
+  "terminal.external.linuxExec": "gnome-terminal --hide-menubar",
+  "window.menuBarVisibility": "toggle",
+  "workbench.iconTheme": "vscode-icons",
+  // "editor.cursorStyle":"underline",
+  // "files.hotExit": false
+  "editor.wordWrap": "off",
+  "editor.dragAndDrop": true,
+  "files.associations": {
+    "*.ch": "crystal",
+    // "*.ecr": "erb",
+    "Cakefile": "crystal"
+  },
+  "extensions.autoUpdate": false,
+  "sync.pathPrefix": "",
+  "files.autoSave": "afterDelay",
+  // "files.autoSave": "onWindowChange",
+
+
+
+  //, "elm.formatOnSave": true
+
+  "editor.minimap.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "rust.mode": "rls",
+  "rust.rustup": {
+    "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu",
+    "toolchain": "nightly-x86_64-unknown-linux-gnu"
+  },
+  "rust.rls": {
+    "useRustfmt": true
+  },
+  "workbench.colorTheme": "Material Dark Theme"
+}

@@ -1,0 +1,22 @@
+VirtualBox GUI VM Selector Window 5.1.24 r117012 linux.amd64 (Jul 24 2017 09:06:26) release log
+00:00:00.915577 Log opened 2017-07-30T09:59:05.886914000Z
+00:00:00.915578 Build Type: release
+00:00:00.915580 OS Product: Linux
+00:00:00.915581 OS Release: 4.12.3-1-MANJARO
+00:00:00.915582 OS Version: #1 SMP PREEMPT Fri Jul 21 09:37:31 UTC 2017
+00:00:00.915598 DMI Product Name: Aspire VN7-792G
+00:00:00.915604 DMI Product Version: V1.05
+00:00:00.915647 Host RAM: 7901MB (7.7GB) total, 5216MB (5.0GB) available
+00:00:00.915651 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.915652 Process ID: 13462
+00:00:00.915653 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.915673 Qt version: 5.9.1
+00:00:00.931414 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:01.289021 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:01.292899 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 0x0 x 960x1062
+00:00:04.868119 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:06:43.785888 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:06:47.803142 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:07:03.149541 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:07:21.838497 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:07:22.276318 GUI: UIMediumEnumerator: Medium-enumeration finished!

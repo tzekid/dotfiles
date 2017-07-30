@@ -1,0 +1,29 @@
+{
+    // Vim-like keybindings
+    "Alt-h": "CursorLeft",
+    "Alt-j": "CursorDown",
+    "Alt-k": "CursorUp",
+    "Alt-l": "CursorRight",
+
+    // Litl' hacks
+    "Alt-d": "Delete",
+
+    "Alt-u": "WordLeft",
+    "Alt-o": "WordRight",
+
+    "Alt-i": "CursorPageUp",
+    "Alt-m": "CursorPageDown",
+
+    "Alt-H": "SelectWordLeft",
+    "Alt-J": "SelectDown",
+    "Alt-K": "SelectUp",
+    "Alt-L": "SelectWordRight",
+
+    // Added split func.
+    "Alt-V": "VSplit",
+    "Alt-B": "HSplit",
+    "Alt-U": "Unsplit",
+
+    "Alt-RightSq": "PreviousTab",
+    "Alt-Backslash": "NextTab"
+}
