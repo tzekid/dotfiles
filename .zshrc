@@ -320,6 +320,8 @@ alias ctp="xprop _NET_WM_PID | cut -d' ' -f3"
 
 alias open='xdg-open'
 
+alias wake_up='vlc ~/Videos/cocaine.mp4'
+
 export XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/
 
 export LIBRARY_PATH=/home/tzekid/Downloads/aur/crsfml/voidcsfml/lib
@@ -341,3 +343,6 @@ eval "$(vg eval --shell zsh)"
 
 # Radukobrew @ perl6
 eval "$(/home/tzekid/.rakudobrew/bin/rakudobrew init -)"
+
+alias play='vblank_mode=0 primusrun '
+alias game='vblank_mode=0 primusrun '
