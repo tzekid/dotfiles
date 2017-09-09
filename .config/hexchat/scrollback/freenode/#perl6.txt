@@ -1,0 +1,603 @@
+T 1502203989 18<raschipi18>	I think I got confused in my anser, .comb.elems does the same thing in Perl6 as .chars.size in Ruby.
+T 1502204024 18<raschipi18>	Or does it?
+T 1502204112 18<RockyBalboa18>	But what I was really saying is that "elems" feels like I will get an array or a collection of elements back, not an integer :)
+T 1502204113 18<geekosaur18>	the real problem is, what is a character? how many characters in Æ̈̊ ?
+T 1502204118 18<RockyBalboa18>	But it's a minor thing yes :)
+T 1502204156 18<RockyBalboa18>	A character = a unicode character?
+T 1502204184 18<raschipi18>	RockyBalboa: Yes a "grapheme cluster".
+T 1502204212 23*	rurban (~Adium@185.54.206.1423) has joined
+T 1502204268 18<timotimo18>	it could very well be that when you comb a string and ask for the .elems that it'll use count-only to not have to create an array of characters
+T 1502204272 24*	Guest12799 has quit (Ping timeout: 268 seconds)
+T 1502204324 18<andreoss18>	is it possible to specify varience for parametric role?
+T 1502204333 18<raschipi18>	m: "🤷😂👨‍👩‍👦‍👦".comb
+T 1502204333 18<camelia18>	rakudo-moar 674551: ( no output )
+T 1502204338 18<moritz18>	andreoss: what does that mean?
+T 1502204339 18<raschipi18>	m: "🤷😂👨‍👩‍👦‍👦".comb.say
+T 1502204339 18<camelia18>	rakudo-moar 674551: OUTPUT: «(🤷 😂 👨‍👩‍👦‍👦)␤»
+T 1502204361 18<timotimo18>	don't we have multi roles? :)
+T 1502204370 24*	robertle has quit (Quit: Lost terminal)
+T 1502204372 18<moritz18>	we do
+T 1502204385 18<timotimo18>	is that perhaps what andreoss is asking for?
+T 1502204449 18<andreoss18>	role Container[::A] { has A $.v }; class Foo {}; class Bar is Foo {}; Container[Foo] is a super class of Container[Bar]
+T 1502204482 18<timotimo18>	ah, now i get it
+T 1502204497 18<timotimo18>	i.e. do we smartmatch (for example) the parameters when we smartmatch roles
+T 1502204688 18<andreoss18>	m: role Container[::A] { has A $.v }; class Foo {}; class Bar is Foo {}; say Container[Foo] ~~ Container[Bar]
+T 1502204689 18<camelia18>	rakudo-moar 674551: OUTPUT: «False␤»
+T 1502204712 18<timotimo18>	looks like we don't
+T 1502204722 18<timotimo18>	of course role parameters can be more than just types
+T 1502204742 24*	dha has quit (Quit: Leaving)
+T 1502204752 24*	anaeem1_ has quit (Remote host closed the connection)
+T 1502204770 23*	anaeem1 (~anaeem1@103.255.6.423) has joined
+T 1502204799 24*	anaeem1 has quit (Remote host closed the connection)
+T 1502204801 23*	aborazmeh (~aborazmeh@85.102.237.623) has joined
+T 1502204801 24*	aborazmeh has quit (Changing host)
+T 1502204801 23*	aborazmeh (~aborazmeh@unaffiliated/aborazmeh23) has joined
+T 1502204818 23*	anaeem1_ (~anaeem1@103.255.6.423) has joined
+T 1502204845 24*	anaeem1_ has quit (Remote host closed the connection)
+T 1502204855 18<moritz18>	m: role Container[::A] { has A $.v }; class Foo {}; class Bar is Foo {}; say Container[Bar] ~~ Container[Foo]
+T 1502204856 18<camelia18>	rakudo-moar 674551: OUTPUT: «True␤»
+T 1502204866 23*	anaeem1 (~anaeem1@103.255.6.423) has joined
+T 1502204869 18<moritz18>	we do ^^
+T 1502204873 18<timotimo18>	oh, huh, the ~~ was just the other way around
+T 1502204880 18<timotimo18>	it's not even late, but i feel like i'm tired
+T 1502204895 24*	anaeem1 has quit (Remote host closed the connection)
+T 1502204898 18<andreoss18>	my bad
+T 1502204912 23*	anaeem1_ (~anaeem1@103.255.6.423) has joined
+T 1502204925 18<andreoss18>	so it's covariant by default 
+T 1502204943 24*	anaeem1_ has quit (Remote host closed the connection)
+T 1502204959 18<RockyBalboa18>	timotimo: insall redshift on your computer, it's like power saving mode for the eyes :)
+T 1502204961 23*	anaeem1 (~anaeem1@103.255.6.423) has joined
+T 1502204982 23*	itaipu (~Marco@168.121.96.923) has joined
+T 1502204988 18<RockyBalboa18>	* install
+T 1502204990 24*	anaeem1 has quit (Remote host closed the connection)
+T 1502205005 18<timotimo18>	i have that
+T 1502205020 24*	aborazmeh has quit (Client Quit)
+T 1502205030 18<RockyBalboa18>	Ok lol :)
+T 1502205070 23*	Alikzus (~Alikzus@h-44-103.A165.priv.bahnhof.se23) has joined
+T 1502205141 18<andreoss18>	what is the motivation behind not having parametic classes?
+T 1502205173 18<timotimo18>	when you use a role as a type it'll create a class for you, called a "pun"
+T 1502205287 23*	Dis3buted (bceec882@gateway/web/freenode/ip.188.238.200.13023) has joined
+T 1502205345 18<Dis3buted18>	Rakudo
+T 1502205369 23*	haha_ (~ha@88-222-235-156.meganet.lt23) has joined
+T 1502205377 18<timotimo18>	that's right
+T 1502205387 23*	matiaslina (~matiaslin@host62.190-226-106.telecom.net.ar23) has joined
+T 1502205426 24*	haha_ has quit (Client Quit)
+T 1502205635 24*	Dis3buted has quit (Ping timeout: 260 seconds)
+T 1502205656 18<andreoss18>	is there a differece betwee a role type and a class type?
+T 1502205667 18<timotimo18>	there's differences, sure
+T 1502205669 18<jnthn18>	andreoss: Classes are open (can be augmented) would be one notable problem, but in general roles are units of re-use and classes are units of instance management.
+T 1502205814 23*	aborazmeh (~aborazmeh@85.102.237.623) has joined
+T 1502205814 24*	aborazmeh has quit (Changing host)
+T 1502205814 23*	aborazmeh (~aborazmeh@unaffiliated/aborazmeh23) has joined
+T 1502205961 18<andreoss18>	m: constant infix:<+++> = * + *; say 2 +++ 1
+T 1502205962 18<camelia18>	rakudo-moar 674551: OUTPUT: «5===SORRY!5=== Error while compiling <tmp>␤Variable '&infix:<+++>' is not declared␤at <tmp>:1␤------> 3constant infix:<+++> = * + *; say 2 7⏏5+++ 1␤»
+T 1502205986 18<andreoss18>	m: constant infix:<+++> = * + *; say infix:<+++>
+T 1502205988 18<camelia18>	rakudo-moar 674551: OUTPUT: «{ ... }␤»
+T 1502206006 18<timotimo18>	m: constant &infix:<+++> = * + *; say 1 +++ 3
+T 1502206007 18<camelia18>	rakudo-moar 674551: OUTPUT: «4␤»
+T 1502206014 18<timotimo18>	it looks for things starting with &
+T 1502206025 18<timotimo18>	which you get by default with a sub declaration, but not with a constant declaration
+T 1502206056 23*	Ven (~textual@80.12.43.13723) has joined
+T 1502206080 24*	28Ven is now known as 18Guest99057
+T 1502206547 24*	mr-fooba_ has quit (Ping timeout: 255 seconds)
+T 1502206602 24*	rurban has quit (Quit: Leaving.)
+T 1502206663 24*	aborazmeh has quit (Ping timeout: 260 seconds)
+T 1502206694 23*	mr-foobar (~mucker@115.98.132.14123) has joined
+T 1502206735 23*	RockyBalboa_ (5506fe2b@gateway/web/freenode/ip.85.6.254.4323) has joined
+T 1502206860 24*	RockyBalboa has quit (Ping timeout: 260 seconds)
+T 1502206949 23*	khw (~chatzilla@2601:281:8380:7f0:e8fa:b983:3cc0:13a223) has joined
+T 1502207119 23*	cdg (~cdg@157.166.173.423) has joined
+T 1502213771 19*	Now talking on 22#perl6
+T 1502213771 22*	Topic for 22#perl6 is: »ö« Welcome to Perl 6! | https://perl6.org/ | evalbot usage: 'p6: say 3;' or rakudo:,  or /msg camelia p6: ... | irclog: http://irc.perl6.org or http://colabti.org/irclogger/irclogger_logs/perl6 | UTF-8 is our friend!
+T 1502213771 22*	Topic for 22#perl6 set by 26moritz!~moritz@tina.perlgeek.de (24Tue Dec 22 19:12:58 2015)
+T 1502213772 24*	andrzejku has quit (Read error: Connection reset by peer)
+T 1502213778 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502213810 23*	astj (~astj@122x221x184x68.ap122.ftth.ucom.ne.jp23) has joined
+T 1502213995 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502214113 24*	astj has quit (Ping timeout: 268 seconds)
+T 1502214245 23*	RockyBalboa (5506fe2b@gateway/web/freenode/ip.85.6.254.4323) has joined
+T 1502214703 18<ugexe18>	strange, many of my perl6 repos are now showing up as unknown on github
+T 1502214775 18<ugexe18>	https://github.com/github/linguist/pull/3735/files looks suspect
+T 1502214933 23*	Ven (~textual@80.12.33.12523) has joined
+T 1502214958 24*	28Ven is now known as 18Guest43717
+T 1502215110 23*	ChoHag (~mking@143.177.41.24523) has joined
+T 1502215158 18<timotimo18>	sena_kun: pong
+T 1502215377 24*	cdg_ has quit (Remote host closed the connection)
+T 1502215410 23*	cdg (~cdg@157.166.173.423) has joined
+T 1502215532 18<sena_kun18>	timotimo, hello. There are some changes from me to Net::ZMQ, I've pinged arnsholt, but no success, so I thought you can help me with a pull request review/merge, especially since you seem to use that library. I'd like rather not fork it.
+T 1502215553 23*	espadrine (~tyl@dan75-7-88-166-187-54.fbx.proxad.net23) has joined
+T 1502215647 24*	cdg has quit (Ping timeout: 240 seconds)
+T 1502215690 23*	cdg (~cdg@157.166.173.423) has joined
+T 1502215703 18<sena_kun18>	timotimo, of course, if it doesn't interfere too much with your plans.
+T 1502215777 18<timotimo18>	i don't actually use it, but i know someone else does :)
+T 1502215832 24*	zengargoyle has quit (Ping timeout: 260 seconds)
+T 1502215834 23*	Aaronepower (~Aaronepow@79.97.98.3023) has joined
+T 1502215860 24*	haha_ has quit (Quit: haha_)
+T 1502215860 24*	Guest43717 has quit (Ping timeout: 260 seconds)
+T 1502215909 18<timotimo18>	huh, this is frustrating, i can't find the relevant emails any more
+T 1502216060 23*	user3 (~chatzilla@unaffiliated/myfree23) has joined
+T 1502216147 18<user318>	regex. what is the difference in regard to capture between (\w+)? and ([\w+]?)
+T 1502216231 18<timotimo18>	the first capture is allowed to "be missing" while the second is allowed to match an empty string
+T 1502216234 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502216259 18<user318>	ok, so the first would produce Nil while the 2nd would produce an empty string?
+T 1502216312 24*	Aaronepower has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1502216313 18<user318>	i'll run a few tests...
+T 1502216380 23*	cdg_ (~cdg@157.166.173.423) has joined
+T 1502216437 24*	Cabanossi has quit (Ping timeout: 276 seconds)
+T 1502216522 18<ugexe18>	well if it uses positional matches anywhere it could change that
+T 1502216546 23*	Cabanossi (~Cabanossi@pD9F850C1.dip0.t-ipconnect.de23) has joined
+T 1502216616 24*	cdg has quit (Read error: Connection reset by peer)
+T 1502216620 23*	cdg__ (~cdg@157.166.173.423) has joined
+T 1502216621 18<user318>	i think i get the idea. (\w+)? is probably what the cleaner one to use most often
+T 1502216622 18<ugexe18>	maybe not
+T 1502216640 24*	merced (merced@unaffiliated/merced24) has left ("WeeChat 1.7-rc2")
+T 1502216644 24*	cdg_ has quit (Ping timeout: 260 seconds)
+T 1502216649 18<user318>	*is probably the cleaner one...
+T 1502216675 24*	28arnsholt_ is now known as 18arnsholt
+T 1502216707 24*	zengargoyle has quit (Ping timeout: 260 seconds)
+T 1502216784 18<AlexDaniel18>	gfldex: hey ^^
+T 1502216789 18<AlexDaniel18>	nice to see you around
+T 1502216848 18<sena_kun18>	arnsholt, ping?
+T 1502216920 18<arnsholt18>	sena_kun: Yeah?
+T 1502216939 18<ugexe18>	ah I guess some Perl 6 repos will show up as Unknown language on github until the repo is updated / cache somehow reset since they changed the name from Perl6 to Perl 6
+T 1502217005 18<sena_kun18>	arnsholt, hi! I am interested in Net::ZMQ a bit and sent a PR today, but it brings some changes and I think it needs to be reviewed. If you are still interested in this project, I will be very grateful for any help from you.
+T 1502217014 18<user318>	what is the official name of the language, Perl6 or Perl 6?
+T 1502217086 23*	Aaronepower (~Aaronepow@79.97.143.12523) has joined
+T 1502217136 18<[Coke]18>	Perl 6
+T 1502217144 18<[Coke]18>	(with a nbsp if you can manage it, thanks)
+T 1502217170 23*	Ven_ (~textual@80.12.38.2023) has joined
+T 1502217179 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502217208 18<user318>	ok, so the official name is the name of a version
+T 1502217224 18<user318>	doesn't that lack identity?
+T 1502217245 18<user318>	just saying...
+T 1502217294 24*	cfa has quit (Quit: leaving)
+T 1502217328 18<mspo18>	perl 6000
+T 1502217406 18<user318>	maybe in 6000 years, i.e. another 6000 since creation
+T 1502217450 18<user318>	jk
+T 1502217459 18<tbrowder18>	m: sub foo { say &?ROUTINE.name }
+T 1502217459 18<camelia18>	rakudo-moar 674551: ( no output )
+T 1502217468 18<arnsholt18>	sena_kun: It's been ages since I did anything with that stuff
+T 1502217476 18<arnsholt18>	And AFAIK noone else is really working on it
+T 1502217517 18<arnsholt18>	So if you want, I could give you a commitbit, really
+T 1502217522 18<sena_kun18>	the last PR was merged by Timo and I assumed he has write access too, so pinged him, yes.
+T 1502217599 18<tbrowder18>	m: sub f{ my $s=&?ROUTINE.name; say "DEBUG: $s} foo
+T 1502217599 18<camelia18>	rakudo-moar 674551: OUTPUT: «5===SORRY!5=== Error while compiling <tmp>␤Unable to parse expression in double quotes; couldn't find final '"' ␤at <tmp>:1␤------> 3y $s=&?ROUTINE.name; say "DEBUG: $s} foo7⏏5<EOL>␤    expecting any of:␤        postfix␤»
+T 1502217614 18<sena_kun18>	arnsholt, are there any known to you users of the library? Because I sort of need to update it to current ZMQ version and things went deprecated, etc, it can break stuff.
+T 1502217622 23*	setty1 (~weechat@139.47.12.19323) has joined
+T 1502217632 18<ugexe18>	m: sub foo { &?ROUTINE.name }; say foo()
+T 1502217632 18<camelia18>	rakudo-moar 674551: OUTPUT: «foo␤»
+T 1502217713 18<arnsholt18>	sena_kun: AFAIK, only iperl6kernel
+T 1502217726 18<arnsholt18>	Which isn't exactly bursting with life either
+T 1502217729 24*	ChristopherBotto has quit (Quit: Page closed)
+T 1502217823 18<mspo18>	the number should be higher
+T 1502217827 18<tbrowder18>	ugexe: thanks, too hard to recover on anbiphone. i'm trying to add a debugging statement that says the name of the sib and haven't had much luck getting something like: say "DEBUG: entering sub &?ROUTINE.name"
+T 1502217837 18<mspo18>	to communicate the total lack of compatibility
+T 1502218165 24*	user3 (~chatzilla@unaffiliated/myfree24) has left
+T 1502218305 24*	RockyBalboa has quit (Ping timeout: 260 seconds)
+T 1502218325 24*	Ven_ has quit (Ping timeout: 240 seconds)
+T 1502218379 18<raschipi18>	Perl 6000000000000000000, otherwise the version name doesn't fit in 64-bit integer.
+T 1502218399 18<jnthn18>	Please, if you write a test using Test::META or so, put it in xt/, *not* in t/. Again, I have trouble installing a module because of this. It passes all its tests except this one. :/
+T 1502218423 18<ugexe18>	we really need to spec an author-depends
+T 1502218426 18<nadim18>	I get this error when running Test::META, I rported it and the author said it was fixed and wondered if it was zef that would not update. error: Could not find META6:ver<0.0.4..*> at line 66 , bug report: https://github.com/jonathanstowe/Test-META/issues/27#issuecomment-319090770
+T 1502218446 18<jnthn18>	oh heh, that's exactly the error I just got installing Pluggable
+T 1502218474 23*	Ven (~textual@80.12.34.3123) has joined
+T 1502218481 18<nadim18>	jnthn: read what JStowe write in his answer
+T 1502218498 24*	xinming has quit (Ping timeout: 240 seconds)
+T 1502218499 24*	28Ven is now known as 18Guest91583
+T 1502218564 18<jnthn18>	$ zef install Test::META
+T 1502218564 18<jnthn18>	All candidates are currently installed
+T 1502218574 18<nadim18>	same here
+T 1502218576 18<jnthn18>	And I already did a zef update
+T 1502218581 18<nadim18>	I forced it and still the same error
+T 1502218582 18<ugexe18>	since it was fixed in .10, it might be that your zef version doesn't have the fix where it was doing numerical comparison
+T 1502218585 18<gfldex18>	did you try `zef upgrade Test::META`?
+T 1502218586 18<jnthn18>	Let's add --force
+T 1502218591 24*	darutoko has quit (Quit: Any sufficiently advanced technology is indistinguishable from magic. (Arthur C. Clarke))
+T 1502218593 18<nadim18>	I also updated to the latest zef
+T 1502218643 18<jnthn18>	And that complains about JSON::Class
+T 1502218662 18<ugexe18>	they installo fine for me, so one of two things should fix it
+T 1502218664 18<nadim18>	Could not find JSON::Class:ver<0.0.5..*> 
+T 1502218667 18<jnthn18>	Same here
+T 1502218675 18<ugexe18>	rm -rf ~/.perl6, or rm -rf ~/.zef
+T 1502218678 18<jnthn18>	OK, I'll give this 2 mroe minutes and then I'll copy-paste :)
+T 1502218708 24*	Kyo91 has quit (Ping timeout: 240 seconds)
+T 1502218724 18<jnthn18>	Pluggable depends on two further modules for its tests anyway, which I don't care to depend on for what I'm doing 
+T 1502218747 18*	jnthn just nabs the idea at the heart of it :)
+T 1502218752 18<nadim18>	rm -rf ~/.zef   did not help, trying the other
+T 1502218762 24*	andrzejku has quit (Remote host closed the connection)
+T 1502218828 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502218842 18<nadim18>	rm -rf ~/.perl6, still same error
+T 1502218955 18<nadim18>	ugexe: any test one could run for you to help find what it is?
+T 1502218958 24*	dogbert11 has quit (Read error: Connection reset by peer)
+T 1502219037 24*	itaipu has quit (Ping timeout: 240 seconds)
+T 1502219072 18<ugexe18>	i would try to find the file on disk to see if that line of code is as it says, and see if you could correlate that to a stale version somehow
+T 1502219148 24*	nattefrost has quit (Remote host closed the connection)
+T 1502219159 18<[Coke]18>	(xt vs. t) - perl6/docs also needs this separation.
+T 1502219205 18<ugexe18>	nadim: maybe need to `zef nuke site home` if the module with that code is already installed (so it can be reinstalled)
+T 1502219219 18<ugexe18>	that will delete all installed modules
+T 1502219304 18<nadim18>	ohhh noooo!
+T 1502219330 18<nadim18>	can I get a list that I can give back to zef to reinstall all?
+T 1502219349 18<ugexe18>	zef list --installed (but its not something you can just feed back in)
+T 1502219367 18<ugexe18>	otherwise you could just do `zef uninstall Blah` for anything by name
+T 1502219393 18<nadim18>	I try that with META, otherwise I'll nuke all
+T 1502219403 18<nadim18>	the list looks easy enough to parse
+T 1502219421 18<gfldex18>	Pluggable installs fine for me
+T 1502219441 24*	zengargoyle has quit (Ping timeout: 268 seconds)
+T 1502219459 18<ugexe18>	nadim: hell you could just rename the site and home module directories to test
+T 1502219469 18<ugexe18>	rename them back after
+T 1502219662 23*	Kyo91 (~sblumenth@199.47.99.10023) has joined
+T 1502219772 18<nadim18>	it used to work and I am a stubborn SOB
+T 1502219794 18<raschipi18>	stubborn is an understatement
+T 1502219804 24*	sufrostico has quit (Ping timeout: 255 seconds)
+T 1502219811 18<mspo18>	what about vendor?
+T 1502219820 24*	28Guest91583 is now known as 18Ven``
+T 1502219829 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502219884 18<nadim18>	raschipi: I take that as a compliment ;)
+T 1502219885 24*	skids has quit (Ping timeout: 268 seconds)
+T 1502219893 18<raschipi18>	Yes it is.
+T 1502219942 18<ugexe18>	it only worked by coincidence
+T 1502220027 18<nadim18>	zef uninstall JSON::Class JSON::Marshal META6 Test::META then zef install Test::META
+T 1502220043 18<nadim18>	jnthn: ^^
+T 1502220053 18<ugexe18>	m: say Version.new("0.0.5..*"); say v0.0.5..*
+T 1502220054 18<camelia18>	rakudo-moar 674551: OUTPUT: «v0.0.5.*␤v0.0.5..Inf␤»
+T 1502220231 18<jnthn18>	nadim: ah, thanks. Already ended up with about 10 lines of code to do what I needed, so not worth the dep anyway. But will fix things so I'm not in bother next time :)
+T 1502220304 18<nadim18>	 Yu're welcome this has bugged me for a week, I hate seing tests numbers go dowm.
+T 1502220325 18<ugexe18>	 i think `zef upgrade` would have worked too actually
+T 1502220333 18<jnthn18>	nadim: It worked. Yay. :)
+T 1502220342 18<jnthn18>	nadim++
+T 1502220415 18<nadim18>	ugex++
+T 1502220436 18<raschipi18>	Who's ugex?
+T 1502220475 23*	smls (~smls@x55b441e8.dyn.telefonica.de23) has joined
+T 1502220483 18<nadim18>	guy who makes zef among other things
+T 1502220499 18<Geth18>	¦ modules.perl6.org: 4d648afcf0 | (Zoffix Znet)++ | 2 files
+T 1502220499 18<Geth18>	¦ modules.perl6.org: Fix corruption of same-named dists
+T 1502220499 18<Geth18>	¦ modules.perl6.org: 
+T 1502220499 18<Geth18>	¦ modules.perl6.org: The code erroneously finds cached data for the dist using its
+T 1502220499 18<Geth18>	¦ modules.perl6.org: name only, which causes it to find the wrong dist when two dists
+T 1502220500 18<Geth18>	¦ modules.perl6.org: with the same name exists in the ecosystem.
+T 1502220500 18<Geth18>	¦ modules.perl6.org: 
+T 1502220501 18<Geth18>	¦ modules.perl6.org: Use META url as the key to find the cached data by.
+T 1502220503 18<Geth18>	¦ modules.perl6.org: review: https://github.com/perl6/modules.perl6.org/commit/4d648afcf0
+T 1502220594 23*	sufrostico (~Sufrostic@unaffiliated/Sufrostico23) has joined
+T 1502220615 18<smls18>	bisectable6:  sub f { say @_; say %_; };  f |(a => 1, b => 2);
+T 1502220616 18<bisectable618>	smls, Bisecting by output (old=2015.12 new=6745517) because on both starting points the exit code is 0
+T 1502220624 18<bisectable618>	smls, bisect log: https://gist.github.com/82807ad44152bb3d96b5b9099b68ac5b
+T 1502220624 18<bisectable618>	smls, (2016-04-05) https://github.com/rakudo/rakudo/commit/6a2ff75a61fdd49b55eec8dcb647a6822dac090b
+T 1502220661 23*	itaipu (~Marco@168.121.96.923) has joined
+T 1502220677 18<smls18>	bisectable6:  sub f { say @_.elems; say %_.elems; };  f |(a => 1, b => 2);
+T 1502220678 18<bisectable618>	smls, On both starting points (old=2015.12 new=6745517) the exit code is 0 and the output is identical as well
+T 1502220679 18<bisectable618>	smls, Output on both points: «2␤0»
+T 1502220750 18<jnthn18>	|%
+T 1502220773 18<smls18>	m:  say (a => 1, b => 2).Capture;
+T 1502220774 18<camelia18>	rakudo-moar 674551: OUTPUT: «\(:a(1), :b(2))␤»
+T 1502220793 18<smls18>	jnthn: Does | in argument list context not use .Capture?
+T 1502220819 23*	Zoffix (WeeChat@perl6.party23) has joined
+T 1502220863 18<Zoffix18>	No, that's for unpacking
+T 1502220873 18<smls18>	ok
+T 1502220876 18<nadim18>	Meh! now that works and I have updated the repo ... I have nothing to do
+T 1502220882 18<Zoffix18>	| calls a secret method
+T 1502220905 18<jnthn18>	smls: No
+T 1502220916 18<Zoffix18>	m: dd [.FLATTENABLE_LIST, .FLATTENABLE_HASH] with (a => 1, b => 2);
+T 1502220917 18<camelia18>	rakudo-moar 674551: OUTPUT: «[(:a(1), :b(2)), {}]␤»
+T 1502220923 18<jnthn18>	Shh, it's secret!!!
+T 1502220924 18<smls18>	I'm not using   f |%(...)  because one of the named argument values is an Array, and the  %(...)  creates a Hash which itemizes the Array, and that messes up the assignment to the object attribute.
+T 1502220929 18<Zoffix18>	:D
+T 1502220937 18<Zoffix18>	Yeah, they're secret methods. Don't use them directly
+T 1502220969 18<jnthn18>	m: sub f { say @_.elems; say %_.elems; };  f |\(a => 1, b => 2);
+T 1502220969 18<camelia18>	rakudo-moar 674551: OUTPUT: «0␤2␤»
+T 1502220975 18<Zoffix18>	:)
+T 1502220990 18<smls18>	jnthn: Thanks!
+T 1502220998 18<jnthn18>	walk, bbiab :)
+T 1502221034 18<Zoffix18>	So for CPAN dists, I plan to ignore PSIXDISTS and anything that doesn't have a cpan URL as a source url
+T 1502221040 18<Zoffix18>	for modules.perl6.orgh
+T 1502221109 18<gfldex18>	Capture literals seam not to be indexed or something is confused by it's backslashy nature
+T 1502221127 18<gfldex18>	it needs a \\ to search for a \ to start with
+T 1502221149 24*	andrzejku has quit (Remote host closed the connection)
+T 1502221152 18*	gfldex files an issue
+T 1502221206 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502221270 24*	llfourn has quit (Ping timeout: 246 seconds)
+T 1502221298 18<raschipi18>	Gotta love UNIX.
+T 1502221437 18<Zoffix18>	Why?
+T 1502221510 18<raschipi18>	"it's backslashy nature"
+T 1502221558 18*	Zoffix doesn't see what a JS piece of code with an error in it has to do with UNIX or the love of it :P
+T 1502221681 18*	Zoffix will fix in 1hr, unless someone beats to it
+T 1502221785 18*	Zoffix ponders taking an axe to htmlify.p6
+T 1502221822 18<Zoffix18>	Blow it up. Write from scratch. Properly.
+T 1502221830 18*	Zoffix relocates
+T 1502221908 24*	Ven`` has quit (Ping timeout: 240 seconds)
+T 1502222209 24*	andrzejku has quit (Remote host closed the connection)
+T 1502222331 23*	zakharyas (~Snakes@d.cx23) has joined
+T 1502222343 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502222377 24*	zengargoyle has quit (Ping timeout: 240 seconds)
+T 1502222443 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502222467 23*	Ven (~textual@80.12.33.3323) has joined
+T 1502222490 24*	28Ven is now known as 18Guest83286
+T 1502222615 24*	mcmillhj has quit (Ping timeout: 240 seconds)
+T 1502222683 23*	mcmillhj (~huntermcm@216.30.182.20223) has joined
+T 1502222732 18<Zoffix18>	Blow it up and rewrite it and make it generate an SQLite db instead of HTML. Then have a mojo web app serve from that db. Solve all the problems with URLs, improve search, and shorten build times
+T 1502222736 18<Zoffix18>	???
+T 1502222740 18<Zoffix18>	Profit!
+T 1502222783 18<Zoffix18>	and have a bot use the docs from the API
+T 1502222818 18<Zoffix18>	and have p6doc just use the DB
+T 1502222820 24*	andrzejku has quit (Remote host closed the connection)
+T 1502222829 23*	llfourn (~llfourn@185.54.206.1423) has joined
+T 1502222882 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502222931 18<jdv7918>	a web service?
+T 1502222939 18<mspo18>	mm mojo
+T 1502223016 18<Zoffix18>	jdv79: well, with mojo it kinda comes for free
+T 1502223022 24*	andrzejku has quit (Remote host closed the connection)
+T 1502223044 18<Zoffix18>	p6doc would just use a locally stored db, if that's what you meant
+T 1502223080 18<jdv7918>	where is this freeness?
+T 1502223102 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502223175 18<Zoffix18>	jdv79: right there: https://github.com/perl6/modules.perl6.org/blob/master/lib/ModulesPerl6/Controller/Root.pm#L93
+T 1502223199 18<Zoffix18>	jdv79: is Meta6PAN ded?
+T 1502223248 18<jdv7918>	oh, i thought you were referring to some mojo restish pluging thing i didn't know about
+T 1502223273 18<Zoffix18>	Ah. dunno maybe it's there
+T 1502223289 24*	andrzejku has quit (Remote host closed the connection)
+T 1502223320 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502223324 18<jdv7918>	it seems it.  nobody has contributed.  i ran out of tuis when i was porting it to their new version.
+T 1502223354 18<Zoffix18>	ok
+T 1502223388 18<Zoffix18>	good, even
+T 1502223408 18<jdv7918>	you seem to be building up modules.perl6.org and i haven't heard of any clamoring for metacpan6 so...
+T 1502223415 18<Zoffix18>	heh
+T 1502223432 18<jdv7918>	i would say stalled but not dead yet
+T 1502223437 18<ugexe18>	grep.metacpan6 would be great
+T 1502223498 18<Zoffix18>	ugexe: tell AlexDaniel to slap a web interface to his bot :)
+T 1502223507 24*	andrzejku has quit (Remote host closed the connection)
+T 1502223516 18<Zoffix18>	greppable6: Rakudo::Internal
+T 1502223519 18<greppable618>	Zoffix, https://gist.github.com/3d5f9f157d3d6bc8246d6fc6a86ffa77
+T 1502223529 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502223562 18<Zoffix18>	tsk tsk so many offenders :)
+T 1502223569 18<Zoffix18>	greppable6: use nqp
+T 1502223572 18<greppable618>	Zoffix, https://gist.github.com/96eff7b3821f154e3a30b6b057a6d88b
+T 1502223573 18<AlexDaniel18>	haha
+T 1502223582 18<AlexDaniel18>	/o\
+T 1502223627 18<AlexDaniel18>	I'm planning to make whateverables easily runnable locally
+T 1502223628 18<Zoffix18>	wow :) that's a lot 
+T 1502223633 18<Zoffix18>	cool
+T 1502223646 18<AlexDaniel18>	so that people can bisect without talking to the bot at all
+T 1502223661 18<AlexDaniel18>	no plans for a web interface yet, but contributions are welcome :)
+T 1502223770 24*	itaipu has quit (Ping timeout: 268 seconds)
+T 1502223782 18<AlexDaniel18>	NeuralAnomaly: status
+T 1502223784 18<NeuralAnomaly18>	AlexDaniel, [✘] Next release will be in 1 week and 3 days. Since last release, there are 40 new still-open tickets (7 unreviewed and 1 blockers) and 138 unreviewed commits. See http://perl6.fail/release/stats for details
+T 1502223820 18<AlexDaniel18>	fwiw I've marked RT #131857 as a blocker
+T 1502223820 18<synopsebot618>	Link:  https://rt.perl.org/rt3/Public/Bug/Display.html?id=131857
+T 1502223840 24*	sufrostico has quit (Ping timeout: 260 seconds)
+T 1502224070 23*	sufrostico (~Sufrostic@unaffiliated/Sufrostico23) has joined
+T 1502224200 24*	andrzejku has quit (Remote host closed the connection)
+T 1502224224 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502224226 18<AlexDaniel18>	greppable6: storage_test333
+T 1502224228 18<greppable618>	AlexDaniel, https://gist.github.com/0cfe4ad671fd71697c865876f9efcf45
+T 1502224263 18<Zoffix18>	NeuralAnomaly: blockers
+T 1502224264 18<NeuralAnomaly18>	Zoffix, There is 1 release blocker. See http://perl6.fail/release/blockers
+T 1502224264 18<NeuralAnomaly18>	Zoffix, http://perl6.fail/131857 : Aliased named parameters broke in a recent MoarVM commit
+T 1502224272 18<Zoffix18>	ah, yeah
+T 1502224360 24*	andrzejku has quit (Remote host closed the connection)
+T 1502224381 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502224418 18<Zoffix18>	the `is default` stuff is suspicious too. I think dogbert is now having socket bug that looks similar that I had with handle before is default was reverted from it
+T 1502224435 18<Zoffix18>	or rather, I think it's hitting somw other bug
+T 1502224448 18<Zoffix18>	buggable: toast
+T 1502224450 18<buggable18>	Zoffix, Between 2017.06-241-gb3f679b and 2017.06: 13 (1.56%) modules got burnt; 14 (1.68%) got unsucced; 203 (24.37%) out of 833 modules appear unusable. See https://toast.perl6.party/ for details.
+T 1502224553 24*	Cabanossi has quit (Ping timeout: 246 seconds)
+T 1502224576 18<AlexDaniel18>	that's a bit outdated, no?
+T 1502224595 18<Zoffix18>	yup
+T 1502224602 18<AlexDaniel18>	Zoffix: are you planning to rerun this stuff this month?
+T 1502224611 18<AlexDaniel18>	or, this week rather :P
+T 1502224634 18<Zoffix18>	Ok
+T 1502224648 23*	Cabanossi (~Cabanossi@pD9F850C1.dip0.t-ipconnect.de23) has joined
+T 1502224654 24*	andrzejku has quit (Remote host closed the connection)
+T 1502224670 18<AlexDaniel18>	I wish I finally implented safe eval in whateverable, so things like this were not so scary
+T 1502224671 18<Zoffix18>	in ~20hr
+T 1502224674 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502224688 18<AlexDaniel18>	awesome, thanks!
+T 1502224691 24*	bwisti has quit (Quit: Leaving)
+T 1502224706 24*	andrzejku has quit (Remote host closed the connection)
+T 1502224788 23*	cdg (~cdg@157.166.173.423) has joined
+T 1502224988 24*	cdg__ has quit (Ping timeout: 260 seconds)
+T 1502225072 24*	cdg has quit (Ping timeout: 260 seconds)
+T 1502225157 24*	llfourn has quit (Ping timeout: 240 seconds)
+T 1502225302 23*	koto (~koto@29-238-52-37.pool.ukrtel.net23) has joined
+T 1502225469 24*	sena_kun has quit (Ping timeout: 255 seconds)
+T 1502225826 23*	pmurias (~pmurias@185.54.206.1423) has joined
+T 1502226285 24*	raschipi has quit (Ping timeout: 260 seconds)
+T 1502226630 24*	zakharyas has quit (Ping timeout: 240 seconds)
+T 1502226713 23*	TEttinger (~notostrac@76-217-24-171.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502226877 23*	dwarring (7a3d7b7b@gateway/web/freenode/ip.122.61.123.12323) has joined
+T 1502227147 24*	mcmillhj has quit (Ping timeout: 240 seconds)
+T 1502227282 24*	Cabanossi has quit (Ping timeout: 264 seconds)
+T 1502227338 24*	lucs has quit (Quit: Lost terminal)
+T 1502227352 23*	lucs (~lucs@li100-186.members.linode.com23) has joined
+T 1502227354 23*	Cabanossi (~Cabanossi@pD9F850C1.dip0.t-ipconnect.de23) has joined
+T 1502227472 23*	lizmat (~textual@84.241.210.13623) has joined
+T 1502227625 24*	colomon has quit (Quit: colomon)
+T 1502227747 24*	espadrine has quit (Ping timeout: 276 seconds)
+T 1502228080 23*	colomon (~colomon@66-206-253-111.eastlink.ca23) has joined
+T 1502228259 24*	rindolf has quit (Quit: Leaving)
+T 1502228281 23*	markmont (~markmont@c-107-4-111-211.hsd1.mi.comcast.net23) has joined
+T 1502228356 18<Geth18>	¦ doc: 38846bcd26 | (Zoffix Znet)++ | template/search_template.js
+T 1502228356 18<Geth18>	¦ doc: Escape regex meta chars
+T 1502228356 18<Geth18>	¦ doc: 
+T 1502228356 18<Geth18>	¦ doc: Fixes https://github.com/perl6/doc/issues/1442
+T 1502228356 18<Geth18>	¦ doc: review: https://github.com/perl6/doc/commit/38846bcd26
+T 1502228396 18<El_Che18>	so, who's at TPCiA? lizmat, nine already here I think, anyone else?
+T 1502228434 18<Zoffix18>	TimToady?
+T 1502228483 18<Zoffix18>	llfourn
+T 1502228562 23*	MasterDuke (47f4e8c2@gateway/web/freenode/ip.71.244.232.19423) has joined
+T 1502228737 24*	zengargoyle has quit (Ping timeout: 240 seconds)
+T 1502228916 18<AlexDaniel18>	MasterDuke: so what's current the status of memory usage issue?
+T 1502229095 24*	nadim has quit (Ping timeout: 240 seconds)
+T 1502229157 23*	astj (~astj@122x221x184x68.ap122.ftth.ucom.ne.jp23) has joined
+T 1502229163 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502229296 18<lizmat18>	cono
+T 1502229428 24*	zengargoyle has quit (Ping timeout: 240 seconds)
+T 1502229431 24*	astj has quit (Ping timeout: 268 seconds)
+T 1502229517 24*	Kyo91 has quit (Ping timeout: 260 seconds)
+T 1502229638 23*	cpage (~cpage@108-206-232-117.lightspeed.sntcca.sbcglobal.net23) has joined
+T 1502229715 18<MasterDuke18>	i think i saw that jnthn++ fixed a leak today or yesterday, but i don't believe it's the one we're seeing
+T 1502229772 18<MasterDuke18>	figuring out what's going on is difficult, because one of the recent changes increases memory churn a lot
+T 1502229831 18<MasterDuke18>	which makes some numbers look much much bigger than before, but aren't necessarily indicative of a leak or truly increased consumption
+T 1502229831 18<AlexDaniel18>	MasterDuke: can you submit a ticket or should I do it? I find it hard to track the status otherwise
+T 1502229850 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502229880 18<timotimo18>	MasterDuke: i don't properly recall, did we try reverting that one commit that turned memset into free + calloc
+T 1502229882 18<timotimo18>	?
+T 1502229884 18<MasterDuke18>	i can't do it for a while, about to afk for a bit
+T 1502229893 18<MasterDuke18>	timotimo: don't think so
+T 1502229964 18<El_Che18>	lizmat: how was the pre-social? I went to dinner and it was to late to make it
+T 1502229993 18<lizmat18>	well, it wssn't on the roof because of the rain / wetness after the rain
+T 1502230016 18<lizmat18>	it was a nice gathering  :-)
+T 1502230026 18<lizmat18>	people had to be thrown out at 22:30  :-)
+T 1502230031 18<El_Che18>	lots of people?
+T 1502230043 18<lizmat18>	I would say about 100
+T 1502230058 18<El_Che18>	we considerirng walking to the venue at 23h, but we reckon that 23:30 would be too late
+T 1502230095 18<MasterDuke18>	timotimo: think just that commit can be reverted?
+T 1502230103 18<El_Che18>	are you having breakfast in the hotel tomorrow morning?
+T 1502230247 18<timotimo18>	MasterDuke: i think so
+T 1502230417 18<MasterDuke18>	timotimo: http://i.imgur.com/1iucZ0k.png
+T 1502230464 24*	konsolebox has quit (Ping timeout: 255 seconds)
+T 1502230558 18<timotimo18>	why is gc_collect being listed as a memory leak? what does it do?
+T 1502230641 18<MasterDuke18>	heh, i know almost nothing about how the moarvm gc works, don't ask me!
+T 1502230642 24*	smls has quit (Quit: Client terminated!)
+T 1502230657 24*	wamba has quit (Ping timeout: 248 seconds)
+T 1502230753 24*	zengargoyle has quit (Ping timeout: 248 seconds)
+T 1502230849 18<MasterDuke18>	building 2017.07 now to compare with
+T 1502230964 23*	Kyo91 (~sblumenth@pool-173-73-98-77.washdc.fios.verizon.net23) has joined
+T 1502231010 24*	Guest83286 has quit (Ping timeout: 240 seconds)
+T 1502231077 18<MasterDuke18>	http://i.imgur.com/F63DUkB.png
+T 1502231092 18<MasterDuke18>	now afk for a bit
+T 1502231224 24*	Kyo91 has quit (Ping timeout: 255 seconds)
+T 1502231232 18<El_Che18>	is there an OS-independant way to create a tar/zip/whatever archive file with rakudo with using C libraries? (looking for something portable, can't find anything on modules.p6)
+T 1502231406 23*	skids (~bri@c-71-233-204-242.hsd1.ma.comcast.net23) has joined
+T 1502231427 24*	nhywyll has quit (Ping timeout: 240 seconds)
+T 1502231641 24*	st_elmo has quit (Quit: st_elmo)
+T 1502231884 23*	mcmillhj (~huntermcm@c-71-62-149-7.hsd1.va.comcast.net23) has joined
+T 1502231888 18<ugexe18>	well, if you can use base perl 5...
+T 1502231901 18<ugexe18>	but maybe thats only for extraction
+T 1502231926 18<El_Che18>	mmm
+T 1502231972 18<El_Che18>	I wanted a way to tar modules directories to package dependencies. Dependency on perl 5 would be difficult on windows
+T 1502232121 24*	geekosaur has quit (Excess Flood)
+T 1502232146 23*	geekosaur (allbery@dreamshell.ttuttle.net23) has joined
+T 1502232169 24*	mcmillhj has quit (Ping timeout: 268 seconds)
+T 1502232174 24*	geekosaur has quit (Excess Flood)
+T 1502232182 23*	nhywyll (~nhywyll@180.234.26.19823) has joined
+T 1502232213 23*	sufrosti1o (~Sufrostic@181.193.84.14623) has joined
+T 1502232295 23*	geekosaur (allbery@dreamshell.ttuttle.net23) has joined
+T 1502232365 23*	mcmillhj (~huntermcm@c-71-62-149-7.hsd1.va.comcast.net23) has joined
+T 1502232491 18<MasterDuke18>	timotimo: anything jump out at you?
+T 1502232651 18<timotimo18>	the line in collect.c is what does the calloc for the nursery
+T 1502232654 18<jnthn18>	El_Che: I used https://github.com/frithnanth/perl6-Archive-Libarchive in an app on both Windows and Linux.
+T 1502232669 18<jnthn18>	El_Che: To produce tarballs
+T 1502232676 18<jnthn18>	And extract them
+T 1502232697 18<jnthn18>	It's set up on Windows to automatically download the DLLs
+T 1502232735 18<jnthn18>	So they ship and work if made into an installer with https://github.com/jnthn/p6-app-installermaker-wix
+T 1502232768 23*	aborazmeh (~aborazmeh@88.247.113.11623) has joined
+T 1502232768 24*	aborazmeh has quit (Changing host)
+T 1502232768 23*	aborazmeh (~aborazmeh@unaffiliated/aborazmeh23) has joined
+T 1502232801 24*	nhywyll has quit (Ping timeout: 248 seconds)
+T 1502232933 18<El_Che18>	jnthn: thx, I will look into it. I was thinking on a way to bundle all perl6 only deps so an app can be packages. Was reading stuff to understand if it's better to create a versioned pkg to be unpackaged and run, or to do something like Fatpacker on perl5
+T 1502232956 18<El_Che18>	that's why I would prefer no C deps so it's really portable
+T 1502233026 24*	pmurias has quit (Remote host closed the connection)
+T 1502233325 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502463521 19*	Now talking on 22#perl6
+T 1502463522 22*	Topic for 22#perl6 is: »ö« Welcome to Perl 6! | https://perl6.org/ | evalbot usage: 'p6: say 3;' or rakudo:,  or /msg camelia p6: ... | irclog: http://irc.perl6.org or http://colabti.org/irclogger/irclogger_logs/perl6 | UTF-8 is our friend!
+T 1502463522 22*	Topic for 22#perl6 set by 26moritz!~moritz@tina.perlgeek.de (24Tue Dec 22 19:12:58 2015)
+T 1502463652 23*	pmurias (~pmurias@185.127.111.22823) has joined
+T 1502463674 18<pmurias18>	timotimo: I could upload the slides somewhere, not sure what a good place would be?
+T 1502463714 24*	Cabanossi has quit (Ping timeout: 246 seconds)
+T 1502463737 18<pmurias18>	not sure how I should upload a reveal.js presentation
+T 1502463826 23*	Cabanossi (~Cabanossi@p5799599F.dip0.t-ipconnect.de23) has joined
+T 1502463892 24*	ckraniak has quit (Remote host closed the connection)
+T 1502464091 18<[Coke]18>	hythm: here's a dumb app with a bin script using a lib.
+T 1502464111 18<[Coke]18>	warning: might be too dumb.
+T 1502464124 23*	lizmat (~textual@185.127.111.22823) has joined
+T 1502464144 24*	nadim has quit (Ping timeout: 240 seconds)
+T 1502464178 18<El_Che18>	it's an invisible link!
+T 1502464179 18<El_Che18>	:)
+T 1502464240 18<pmurias18>	timotimo: https://pmurias.github.io/rakudo.js-tpc-eu/ - presentation slides
+T 1502464347 18<hythm18>	the app is to dumb to have a link to point to it :D
+T 1502464402 18<El_Che18>	the app provides the link on irc, but it posted to the wrong channel :)
+T 1502464447 18<pmurias18>	El_Che: have we met at the YAPC::EU?
+T 1502464465 23*	nadim (~nadim@c-c559e255.015-131-6d6c6d4.cust.bredbandsbolaget.se23) has joined
+T 1502464511 23*	ckraniak (~ckraniak@2600:100c:b207:a5e9:dd9:d862:d84:8ec423) has joined
+T 1502464544 18<timotimo18>	thanks pmurias :)
+T 1502464554 18<timotimo18>	now i have to leave the house but i'll look later
+T 1502464600 18<pmurias18>	timotimo: that slides itself aren't that informative ;)
+T 1502464611 18<pmurias18>	* themselves
+T 1502464720 18<timotimo18>	ah
+T 1502464737 24*	rindolf has quit (Ping timeout: 248 seconds)
+T 1502464745 18<El_Che18>	pmurias: I don't think so
+T 1502464787 18<El_Che18>	I was timekeeping an other talk during yours :(
+T 1502464813 24*	lizmat has quit (Quit: Feels like there's a nap coming...)
+T 1502464851 18<hythm18>	Coke: Where can I find the smart app?
+T 1502464909 24*	nadim has quit (Ping timeout: 255 seconds)
+T 1502465235 18<El_Che18>	hythm: https://docs.perl6.org/language/objects#Classes <-- that is pretty clear on class, has and method
+T 1502465308 18<hythm18>	Thanks El_Che, Checking this out
+T 1502465326 24*	nowan has quit (Remote host closed the connection)
+T 1502465503 18<El_Che18>	np
+T 1502465506 23*	nowan (~nowan@bl11-18-226.dsl.telepac.pt23) has joined
+T 1502465571 23*	rindolf (~shlomif@77.126.8.11623) has joined
+T 1502465587 18*	[Coke] never sent his link!
+T 1502465592 18<[Coke]18>	github.com/coke/p6-uni
+T 1502465633 23*	khw (~chatzilla@2601:281:8380:7f0:5089:77e6:d699:1abd23) has joined
+T 1502465666 18<hythm18>	I guess the app became smarter :)
+T 1502465669 24*	cpage__ has quit (Read error: Connection reset by peer)
+T 1502465686 24*	MilkmanD1n has quit (Ping timeout: 245 seconds)
+T 1502465725 23*	MilkmanDan (~dan@wilug/expat/MilkmanDan23) has joined
+T 1502465732 23*	lizmat (~textual@185.127.111.22823) has joined
+T 1502465764 24*	zakharyas has quit (Ping timeout: 276 seconds)
+T 1502465765 23*	cpage_ (~cpage@17.201.46.21823) has joined
+T 1502465943 24*	lizmat has quit (Client Quit)
+T 1502465962 24*	zengargoyle has quit (Ping timeout: 258 seconds)
+T 1502466029 24*	pmurias has quit (Remote host closed the connection)
+T 1502466245 23*	lizmat (~textual@185.127.111.22823) has joined
+T 1502466296 24*	someuser has quit (Quit: Lost terminal)
+T 1502466391 24*	lizmat has quit (Client Quit)
+T 1502466410 18*	renormalist fears to ask an FAQ but anyway:
+T 1502466424 18<renormalist18>	Which option does an Emacs user have to edit Perl6 code currently?
+T 1502466440 18<sena_kun18>	renormalist, perl6-more.
+T 1502466468 18*	renormalist checks
+T 1502466471 18<sena_kun18>	renormalist, it gives you syntax highlight and indention.
+T 1502466504 18<renormalist18>	perl6-mod(!)e you mean?
+T 1502466509 18<renormalist18>	with d
+T 1502466517 18<sena_kun18>	sure
+T 1502466521 18<sena_kun18>	just a typo, sorry
+T 1502466521 18<renormalist18>	k
+T 1502466537 18<renormalist18>	fine, just wanted to make sure I don't miss another option
+T 1502466542 18<renormalist18>	thanks
+T 1502466551 18<sena_kun18>	it's quite useful if you ask me, however, it is not a perfect tool and if someone stands up with a better alternative, it will be quite great
+T 1502466588 23*	raschipi_ (c8bd76b2@gateway/web/freenode/ip.200.189.118.17823) has joined
+T 1502466669 18<Geth18>	¦ Inline-Perl5: b77f9175b1 | (Stefan Seifert)++ | lib/Inline/Perl5.pm6
+T 1502466669 18<Geth18>	¦ Inline-Perl5: Speed up p5_to_p6 a little
+T 1502466669 18<Geth18>	¦ Inline-Perl5: 
+T 1502466669 18<Geth18>	¦ Inline-Perl5: Turns out a series of if statements is just faster than using given/when
+T 1502466669 18<Geth18>	¦ Inline-Perl5: Also this should hopefully test the most common types first.
+T 1502466670 18<Geth18>	¦ Inline-Perl5: review: https://github.com/niner/Inline-Perl5/commit/b77f9175b1
+T 1502466752 18<renormalist18>	sena_kun: it's not a trivial task, I adapted cperl-mode years ago and it was a) hard in general and b) hard to keep up with perl6 development
+T 1502466770 24*	raschipi has quit (Ping timeout: 260 seconds)
+T 1502466779 23*	nadim (~nadim@c-c559e255.015-131-6d6c6d4.cust.bredbandsbolaget.se23) has joined
+T 1502466857 18<sena_kun18>	renormalist, no doubts the task is very complex, I'm just dreaming a bit, so don't take it serious. :)
+T 1502466865 18<sena_kun18>	s/serious/seriously/
+T 1502466893 18<renormalist18>	:-)
+T 1502467051 18<sena_kun18>	renormalist, also, about the other options...
+T 1502467154 24*	raschipi_ has quit (Ping timeout: 260 seconds)
+T 1502467180 18<AlexDaniel18>	I wish perl6-mode had someone working on it consistently
+T 1502467205 24*	nadim has quit (Ping timeout: 240 seconds)
+T 1502467220 23*	setty1 (~weechat@139.47.12.22823) has joined
+T 1502467237 18<AlexDaniel18>	we already forked it to perl6/ org, it helped a bit https://github.com/perl6/perl6-mode
+T 1502467248 18<sena_kun18>	the last update of hinrik's perl6-mode was at 2016, since then tbrowder++ improved it here: https://github.com/perl6/perl6-mode - it is a fork and because of some issues not listed on melpa, but if you're okay with installation of raw packages, you can try it. I use "vanilla", so cannot say is it much better though.
+T 1502467279 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502467330 24*	Cabanossi has quit (Ping timeout: 264 seconds)
+T 1502467432 23*	Cabanossi (~Cabanossi@p5799599F.dip0.t-ipconnect.de23) has joined
+T 1502467494 18<AlexDaniel18>	is treyharris on IRC?
+T 1502467498 18<AlexDaniel18>	oh yeah
+T 1502467515 18<AlexDaniel18>	TreyHarris: hey! What do you think about https://github.com/perl6/perl6-mode/issues/11#issuecomment-321853018 ?
+T 1502467527 24*	lowbro has quit (Remote host closed the connection)
+T 1502467872 24*	cpage_ has quit (Quit: cpage_)
+T 1502468015 23*	cpage_ (~cpage@17.201.46.21823) has joined
+T 1502468016 23*	cdg_ (~cdg@162-226-219-152.lightspeed.tukrga.sbcglobal.net23) has joined
+T 1502468146 24*	cdg has quit (Ping timeout: 246 seconds)
+T 1502468234 23*	andrzejku (~andrzejku@90-156-117-46.internetia.net.pl23) has joined
+T 1502468910 24*	zengargoyle has quit (Ping timeout: 240 seconds)
+T 1502469009 23*	zengargoyle (~zengargoy@108-203-62-251.lightspeed.irvnca.sbcglobal.net23) has joined
+T 1502469178 23*	nadim (~nadim@c-c559e255.015-131-6d6c6d4.cust.bredbandsbolaget.se23) has joined
+T 1502469302 24*	zengargoyle has quit (Ping timeout: 260 seconds)
+T 1502469399 23*	lizmat (~textual@185.127.111.22823) has joined

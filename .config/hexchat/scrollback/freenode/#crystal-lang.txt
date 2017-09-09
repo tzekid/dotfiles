@@ -1,0 +1,527 @@
+T 1502047003 24*	thelonelyghost has quit (Ping timeout: 255 seconds)
+T 1502047007 24*	jplatte has quit (Ping timeout: 240 seconds)
+T 1502047026 24*	olbat[m] has quit (Ping timeout: 255 seconds)
+T 1502047030 24*	vegai has quit (Ping timeout: 264 seconds)
+T 1502047391 24*	28Guest2480 is now known as 18Ven``
+T 1502047620 23*	bcardiff (~bcardiff@201.216.238.19223) has joined
+T 1502047925 23*	bcardiff_ (~bcardiff@186.139.31.9023) has joined
+T 1502048010 24*	bcardiff has quit (Ping timeout: 240 seconds)
+T 1502048010 24*	28bcardiff_ is now known as 18bcardiff
+T 1502048085 24*	bcardiff has quit (Client Quit)
+T 1502048479 18<FromGitter18>	<faustinoaq> @LuckyChicken91_twitter I did a tictactoe a weeks ago. ⏎  ⏎ Here you are 👉   https://gist.github.com/faustinoaq/3c3c034713719d82310df3439a892843
+T 1502048566 18<FromGitter18>	<faustinoaq> @dishcandanty Hi, Do you still have VSCode issues?
+T 1502048567 23*	snsei (~snsei@2601:600:8880:43d0:c8bf:a59e:539a:bd3023) has joined
+T 1502048698 24*	snsei_ has quit (Ping timeout: 276 seconds)
+T 1502048716 18<FromGitter18>	<faustinoaq> > That is if there is anyone here using WSL... ⏎  ⏎ @watzon  Thanx, seems to be useful with VSCode and Scry on Windows 😄
+T 1502049186 18<FromGitter18>	<faustinoaq> I shared https://github.com/watzon/wsl-proxy on https://gitter.im/crystal-scry/Lobby , would be useful as workaround for https://github.com/kofno/scry/issues/13
+T 1502051026 -18crystal-gh/22#crystal-lang-	[13crystal] 15tosmi opened pull request #4803: [WIP] update freebsd vagant box to lastest release (11.1) (06master...06freebsd) 02https://git.io/v7oqx
+T 1502051271 23*	tosmi (~user@194-166-89-172.adsl.highway.telekom.at23) has joined
+T 1502051319 23*	tosmi` (~user@193-80-166-75.adsl.highway.telekom.at23) has joined
+T 1502051521 23*	tosmi`` (~user@194-166-89-97.adsl.highway.telekom.at23) has joined
+T 1502051527 24*	tosmi has quit (Ping timeout: 246 seconds)
+T 1502051712 23*	tosmi``` (~user@193-154-122-251.adsl.highway.telekom.at23) has joined
+T 1502051716 24*	tosmi` has quit (Ping timeout: 246 seconds)
+T 1502051737 24*	Ven`` has quit (Read error: Connection reset by peer)
+T 1502051851 Python interface unloaded
+T 1502051998 19*	Now talking on 22#crystal-lang
+T 1502051998 22*	Topic for 22#crystal-lang is: The Crystal programming language | http://crystal-lang.org | Crystal 0.23.1 | Fund Crystal's development: http://is.gd/X7PRtI | GH: https://github.com/crystal-lang/crystal | Docs: http://crystal-lang.org/docs/ | API: http://crystal-lang.org/api/ | Gitter: https://gitter.im/crystal-lang/crystal
+T 1502051998 22*	Topic for 22#crystal-lang set by 26RX14 (24Fri Jul 14 00:33:44 2017)
+T 1502052056 24*	bcardiff has quit (Client Quit)
+T 1502052165 24*	tosmi``` has quit (Ping timeout: 255 seconds)
+T 1502052349 24*	tosmi```` has quit (Ping timeout: 255 seconds)
+T 1502052402 23*	Philpax_ (~Philpax@ppp118-209-209-174.bras2.mel11.internode.on.net23) has joined
+T 1502052592 24*	Philpax has quit (Ping timeout: 260 seconds)
+T 1502054209 23*	thelonelyghost (thelonelyg@gateway/shell/matrix.org/x-vbotbqlnpkxpnwfe23) has joined
+T 1502054250 23*	olbat[m] (olbatmatri@gateway/shell/matrix.org/x-jnbwoaknnoadmyty23) has joined
+T 1502054277 23*	vegai (vegaimatri@archlinux/developer/vegai23) has joined
+T 1502054422 23*	braidn[m] (braidnmatr@gateway/shell/matrix.org/x-onswtgnqubqunzha23) has joined
+T 1502054438 23*	TheGillies (kodomatrix@gateway/shell/matrix.org/x-ivncmsyjppkjeddu23) has joined
+T 1502054452 23*	jplatte (jplattemat@gateway/shell/matrix.org/x-egbdleccshizzruv23) has joined
+T 1502055952 18<FromGitter18>	<bararchy> Thanks @sdogruyol for sharing
+T 1502055984 18<FromGitter18>	<bararchy> Crystal is rocking tiobe https://www.tiobe.com/tiobe-index/
+T 1502057101 23*	hightower2 (~hightower@x4dbd1e0b.dyn.telefonica.de23) has joined
+T 1502057460 18<FromGitter18>	<crisward> Does anyone here do the code triage thing for crystal?
+T 1502058151 FiSHLiM plugin unloaded
+T 1502058151 Python interface unloaded
+T 1502088890 19*	Now talking on 22#crystal-lang
+T 1502088891 22*	Topic for 22#crystal-lang is: The Crystal programming language | http://crystal-lang.org | Crystal 0.23.1 | Fund Crystal's development: http://is.gd/X7PRtI | GH: https://github.com/crystal-lang/crystal | Docs: http://crystal-lang.org/docs/ | API: http://crystal-lang.org/api/ | Gitter: https://gitter.im/crystal-lang/crystal
+T 1502088891 22*	Topic for 22#crystal-lang set by 26RX14 (24Fri Jul 14 00:33:44 2017)
+T 1502089457 23*	mark_66 (~petruilie@86.127.174.3523) has joined
+T 1502089776 24*	rohitpaulk has quit (Ping timeout: 240 seconds)
+T 1502090142 23*	Ven (~textual@80.215.178.3823) has joined
+T 1502090166 24*	28Ven is now known as 18Guest15800
+T 1502090390 24*	Guest15800 has quit (Ping timeout: 240 seconds)
+T 1502090853 23*	rohitpaulk (~rohitpaul@183.83.199.19623) has joined
+T 1502093751 23*	alex``` (~alex@2a01cb000bb310000e31f98b4cdf4eae.ipv6.abo.wanadoo.fr23) has joined
+T 1502094039 18<FromGitter18>	<watzon> Really all I'm looking to do is start kemal as a daemon in the background from a cli app
+T 1502094563 24*	sz0 has quit (Quit: Connection closed for inactivity)
+T 1502095482 18<FromGitter18>	<bararchy> @watzon You can just tell init or systemd to do that, or, you coult `Process.setsid` after a fork and it will live after the "father" process has died
+T 1502095677 24*	mark_66 has quit (Ping timeout: 260 seconds)
+T 1502095702 24*	alex``` has quit (Quit: WeeChat 1.9)
+T 1502095823 23*	leandrobighetti (~leandrobi@pD9EE2757.dip0.t-ipconnect.de23) has joined
+T 1502096491 23*	Ven (~textual@80.215.178.3823) has joined
+T 1502096515 24*	28Ven is now known as 18Guest81141
+T 1502096779 18<FromGitter18>	<drosehn> It would be good to do more than that.  Has anyone written the crystal equivalent of the `daemons` gem?  with `daemons/daemonize`?
+T 1502096863 18<FromGitter18>	<drosehn> (or does kemal already handle most of the steps for `daemonize`?)
+T 1502096916 24*	Guest81141 has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1502097679 23*	Ven_ (~textual@80.215.178.3823) has joined
+T 1502098552 24*	Ven_ has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1502098773 23*	mark_66 (~petruilie@86.127.174.3523) has joined
+T 1502099044 23*	hightower2 (~hightower@x4dbede6a.dyn.telefonica.de23) has joined
+T 1502099048 24*	hightower2 has quit (Read error: Connection reset by peer)
+T 1502100550 24*	bmcginty has quit (Ping timeout: 240 seconds)
+T 1502100681 23*	bmcginty (~bmcginty@100.subnet-66-44-204.ellijay.com23) has joined
+T 1502101219 23*	unshadow (~unshadow@mta.safe-t.com23) has joined
+T 1502101231 24*	unshadow has quit (Client Quit)
+T 1502102828 24*	rohitpaulk has quit (Ping timeout: 240 seconds)
+T 1502102871 23*	rohitpaulk (~rohitpaul@157.48.23.18523) has joined
+T 1502103128 18<oprypin18>	watzon, you just do Process.whatever  or if you insist on having it baked into the same binary then maybe fork would work
+T 1502103217 18<oprypin18>	just use systemd tho :p
+T 1502103674 18<RX1418>	please don't daemonise your own binaries
+T 1502103691 18<RX1418>	there's plenty of tools out there that do it for arbitrary binaries and get it right:
+T 1502103713 18<RX1418>	systemd is one
+T 1502103726 18<RX1418>	there was another standalone one i forgot about
+T 1502103902 18<FromGitter18>	<bararchy> Newest passtime activety: stalk http://crystalshards.xyz/?sort=updated
+T 1502104486 24*	leandrobighetti has quit ()
+T 1502104927 23*	leandrobighetti (~leandrobi@pD9EE2757.dip0.t-ipconnect.de23) has joined
+T 1502105452 18<FromGitter18>	<akzhan> @RX14 any chances to get #4653 merged?
+T 1502105483 18<FromGitter18>	<akzhan> And, of course #4675
+T 1502105719 18<RX1418>	#4675 is pending an opinion from an expert
+T 1502105773 18<RX1418>	plus it's a pain to review because it's quite a large diff
+T 1502105785 18<FromGitter18>	<akzhan> @funny-falcon is one of two men who did Ruby 2.4 Hash :)
+T 1502105825 18<RX1418>	well, there's a reason why we need approval by 2 core team people before a merge
+T 1502105831 18<RX1418>	to get a second opinion
+T 1502105835 18<RX1418>	and thats what we need
+T 1502105912 18<FromGitter18>	<akzhan> Ok. Anyway I think that it should be merged. Hashing algorithm can be changed within minutes later. This is becvause #4675 is about Hashing infrastructure and number normalization.
+T 1502105969 18<FromGitter18>	<akzhan> It’s better than anything I have seen before. Rust, Python etc.
+T 1502106062 18<RX1418>	maybe it can be changed within minutes but thats no reason not to get it right first time
+T 1502106240 18<FromGitter18>	<akzhan> Yes, it is. But there is some misambiquation. Hasing is not high science at all. And we need no cryptographically secure hashing.  We need just unpredicable solid one. Proposed hashing is fast and simple.
+T 1502106283 18<RX1418>	but how do we know it's not predictable
+T 1502106322 18<RX1418>	we're not experts in hashing algorithms, we don't know whether this new algorithm is any less predictable than 31 * hash + value
+T 1502106326 18<FromGitter18>	<akzhan> Siphash13 is another option (Rust authors firstly introduce Siphash24 - very slow, but just changed it to Siphash13 due to its speed).
+T 1502106335 18<RX1418>	and I don't know where to start on proving that
+T 1502106419 18<FromGitter18>	<akzhan> Ok, i’ll reach funny-falcon to provide numbers :)
+T 1502106564 18<RX1418>	All I need is one other person with verifiable credentials to OK this and it's good to review
+T 1502106602 18<RX1418>	it's not about not trusting funny-falcon, it's about getting 2 opinions
+T 1502106628 18<FromGitter18>	<akzhan> Ok, got it. ⏎  ⏎ But I should note that it is just prerequisite for another work - rebuilding of Hash class itself :)
+T 1502106636 18<RX1418>	yes
+T 1502106717 18<FromGitter18>	<akzhan> Do you know anybody else who is hashing expert
+T 1502106746 18<FromGitter18>	<akzhan> I’m just not expert. It’s ok from my side. But I’m enthusiast :)
+T 1502106759 18<RX1418>	no, but i'm sure funny-falcon does being an expert himself
+T 1502106892 18<FromGitter18>	<akzhan> Russian experts usually prefer that someone else say about them. Some variant of modesty :)
+T 1502106982 18<FromGitter18>	<akzhan> But just asked @funny-falcon. It’s work was looked by Jean-Phillipe Aumasson so I’ll try to reach him.
+T 1502107209 18<FromGitter18>	<konovod> I think i would be best to change PR to SipHash13 (that is proven and used by rust), then try to merge replacing it with faster hash. So no conflict and discussion on the better hash will not affect infrastructure. Well unless @funny-falcon won't be too offended by using a slow hash.
+T 1502107226 18<RX1418>	that's an option
+T 1502107248 18<RX1418>	i think both is fine
+T 1502107620 24*	rohitpaulk has quit (Ping timeout: 255 seconds)
+T 1502107700 18<FromGitter18>	<akzhan> Solution is to replace hashing algorithm with slow siphash13. Will do
+T 1502107728 18<FromGitter18>	<akzhan> Funny falcon hash algorithm will be proposed by another pull request. It will do faster
+T 1502107842 18<RX1418>	@akzhan if he thinks it's easier to get an expert to OK it rather than implement SipHash13 then he should go for the former
+T 1502107863 18<RX1418>	but if not, and he's rather just get Hash refactor rolling then he should go for the latter
+T 1502107897 18<RX1418>	i don't want him to feel that we want siphash13, I don't mind either way, we just need a second opinion
+T 1502108176 18<FromGitter18>	<funny-falcon> I don't think it is easy to convince expert to analyze non-cryptographic algorithm. ⏎ I may try to explain how it works, but I have no competence to prove anything. ⏎ I don't want to change my PR to siphash13. But I wont be against if some copy code from my PR and reuse it for other PR with siphash inside.
+T 1502108321 24*	w-p has quit (Ping timeout: 248 seconds)
+T 1502108908 18<FromGitter18>	<oprypin> b
+T 1502108983 18<jokke18>	hey
+T 1502109174 18<jokke18>	hey, how would i go about deploying an amber project to something else than a cloud hoster?
+T 1502109216 18<jokke18>	i'd want to have it build docker containers and deploy them to via docker stack
+T 1502109220 18<jokke18>	-to
+T 1502109244 18<FromGitter18>	<akzhan> just build project  got executable and copy it to container (in docker file)
+T 1502109265 18<FromGitter18>	<akzhan> nothing special.
+T 1502109322 18<FromGitter18>	<akzhan> you may need to do this with —cross-compile option.
+T 1502109347 18<FromGitter18>	<akzhan> to set llvm target triple to conianer os.
+T 1502109422 -18crystal-gh/22#crystal-lang-	[13crystal] 15MakeNowJust opened pull request #4805: Context: show more helpful message for never called method (06master...06fix/crystal-context/detailed-message-for-nerver-called-method) 02https://git.io/v7KII
+T 1502109437 18<FromGitter18>	<akzhan> Somebody uses crystallang/crystal image to compile executable within container but it just an option.
+T 1502109453 18<FromGitter18>	<akzhan> https://hub.docker.com/r/crystallang/crystal/
+T 1502109538 18<FromGitter18>	<akzhan> https://manas.tech/blog/2016/09/28/running-crystal-on-docker.html
+T 1502109546 18<RX1418>	simple way is just to FROM crystallang/crystal:0.23.1 and then ADD the source, and RUN shards build then set CMD to the executable
+T 1502109550 18<RX1418>	that's how I would do it
+T 1502109562 23*	bcardiff (~bcardiff@181.170.211.14223) has joined
+T 1502109730 24*	bcardiff has quit (Client Quit)
+T 1502110590 18<RX1418>	@funny-falcon I don't even need an expert to look through your hash function, i just need someone to say that the hash function is fine to use.
+T 1502111077 18<FromGitter18>	<faustinoaq> @watzon A proof concept for Crystal on JVM or NetCore would be interesting, also I'm thinking on a JS backend for Crystal https://github.com/crystal-lang/crystal/issues/4778#issuecomment-320440976
+T 1502111131 18<FromGitter18>	<bararchy> Crystal on .Net .... please no
+T 1502111181 18<FromGitter18>	<akzhan> @RX14 It already approved by me :)
+T 1502111211 18<FromGitter18>	<faustinoaq> I use dotNet on Linux, is very impressive, also Xamarin.
+T 1502111258 18<FromGitter18>	<sdogruyol> @akzhan 👍 😄
+T 1502111336 24*	alibby has quit (Ping timeout: 260 seconds)
+T 1502111359 23*	alibby (~Adium@c-69-249-113-3.hsd1.pa.comcast.net23) has joined
+T 1502111434 23*	w-p (~will@108-203-1-1.lightspeed.rlghnc.sbcglobal.net23) has joined
+T 1502111502 18<FromGitter18>	<funny-falcon> @RX14 who is "someone"? @akzhan is "someone" or not? ⏎ I spent a lot of time to convince Rust to switch from siphash24 to siphash13. I knew I could not sell my function to them. ⏎ I had to call Jean-Phillipe Aumasson to join conversation (he joined, cause it were his function). ⏎ And you know what? I had to several times to remind that he is SipHash's author. ⏎ Who is the "someone" who just have 
+T 1502111502 18<FromGitter18>	... enough weight? [https://gitter.im/crystal-lang/crystal?at=5988670dee5c9a4c5f9aa1ec]
+T 1502111535 18<FromGitter18>	<faustinoaq> @bararchy Crystal is a front-end for LLVM, I think  would be interesting see crystal code running anywhere 😄 JVM, Native, netCore, WebAssembler, JavaScript. I mean just imagine the possibilities. Ruby already have something like that with IronRuby, JRuby, mRuby, Opal, Rubinius, etc.
+T 1502111567 18<RX1418>	well if siphash's author came up and said your hash was fine i'd merge it right away @funny-falcon
+T 1502111585 18<RX1418>	because the person has written a hash which has been accepted and tested and known to be good
+T 1502111605 18<RX1418>	anyone with verifiable experience in the field is enough
+T 1502111634 18<FromGitter18>	<funny-falcon> @RX14 :-) see, so you need an expert, despite your previous word. ⏎  ⏎ > anyone with verifiable experience in the field is enough ⏎ I thought, it is "expert" definition. [https://gitter.im/crystal-lang/crystal?at=59886792329651f46ef9e48b]
+T 1502111669 18<RX1418>	yes that was implied that "someone" was an expert
+T 1502111755 18<FromGitter18>	<sdogruyol> lol
+T 1502111843 18<FromGitter18>	<faustinoaq> I would use Ruby all time but I love Crystal types too much 😜  (just a joke) I love all languages by equal 😆 , I'm just having a fun with Crystal.
+T 1502111923 18<FromGitter18>	<faustinoaq> Crystal is my choice because types, concurrency and binary distribution 😄
+T 1502112108 18<FromGitter18>	<sdogruyol> @faustinoaq true
+T 1502112316 18<FromGitter18>	<funny-falcon> I'm not fellow of Jean-Phillipe to ask him to analyze my function in public. ⏎ I had the audacity to ask for it in private mail, and his answer was:  ⏎ "I had looked at your code and found no obvious flaw...  However I've not run statistical tests nor differential cryptanalysis or diffusion tests, so don't take my word as a quality stamp :-)" ⏎ I doubt he will give more exhaustive answer. ⏎  ... 
+T 1502112316 18<FromGitter18>	... [https://gitter.im/crystal-lang/crystal?at=59886a3c614889d47526fbc8]
+T 1502112568 24*	Philpax_ has quit (Ping timeout: 240 seconds)
+T 1502112650 18<FromGitter18>	<watzon> @faustinoaq a crystal->js transpiler sounds like a grand idea to me
+T 1502112696 18<FromGitter18>	<akzhan> @funny-falcon it looks like somebody can write statistical tests for hashing algorithms in crystal. is http://hashtest.sourceforge.net ok for source of it?
+T 1502112808 18<FromGitter18>	<funny-falcon> I've tested with SMHasher. I could test with hashtest as well.
+T 1502113140 23*	nikkkk (~textual@HSI-KBW-095-208-172-010.hsi5.kabel-badenwuerttemberg.de23) has joined
+T 1502113142 24*	nikkkk has quit (Client Quit)
+T 1502113228 18<FromGitter18>	<akzhan> You have written it in C? afaik, https://github.com/demerphq/smhasher allows C/C++ implementation only
+T 1502113264 18<FromGitter18>	<akzhan> these results should be attached to pull request
+T 1502113280 18<FromGitter18>	<akzhan> and C++ implementation should be published too.
+T 1502113652 18<FromGitter18>	<codenoid> whoaa, active again https://twitter.com/asterite
+T 1502114224 18<FromGitter18>	<faustinoaq> IRB compiled to Web Assembly 👉 http://joshnuss.github.io/mruby-web-irb/
+T 1502114237 18<FromGitter18>	<faustinoaq> very impressive
+T 1502114628 18<RX1418>	@funny-falcon that email helps, thanks
+T 1502114646 18<RX1418>	@akzhan you can call crystal from C++ so it should be fine.
+T 1502114981 18<jokke18>	RX14: akzhan: hm i wish there was a builtin way to ship the whole cluster (with db container)
+T 1502115006 18<RX1418>	you mean with docker?
+T 1502115013 18<RX1418>	isnt that docker compose?
+T 1502115239 24*	mark_66 has quit (Remote host closed the connection)
+T 1502115327 18<FromGitter18>	<akzhan> @jokke nobody embeds database into app container. it should be another one. and database files should be outside of database container.
+T 1502115352 18<jokke18>	RX14: i was thinking about docker stack
+T 1502115361 18<jokke18>	akzhan: i'm aware ;)
+T 1502115389 18<RX1418>	jokke, doesn't docker stack just deploy a compose file on swarm?
+T 1502115399 18<jokke18>	exactly
+T 1502115410 18<RX1418>	so write a compose file?
+T 1502115418 18<jokke18>	there's even one included..
+T 1502115424 18<RX1418>	ok
+T 1502115425 18<jokke18>	i could just use that
+T 1502115442 18<jokke18>	i'd still need to build the app container manually.
+T 1502115449 18<jokke18>	but i guess that's doable :)
+T 1502116629 18<FromGitter18>	<zatherz> if anybody here has the time, could you try to run this benchmark and give me the output? https://gist.github.com/zatherz/749ce5960380301ebf7e2b613316b288
+T 1502116647 18<FromGitter18>	<zatherz> run with `crystal run --release bench.cr`
+T 1502116703 18<FromGitter18>	<zatherz> it's to test which method of getting "dependencies" from a json payload (fields that are needed to deserialize other fields) is faster, I want to make sure the results are consistent
+T 1502117123 18<FromGitter18>	<zatherz> crap, it segfaults for me lol
+T 1502117182 18<FromGitter18>	<konovod> nice try)
+T 1502117659 18<FromGitter18>	<funny-falcon> @akzhan  ⏎  ⏎ > You have written it in C? ⏎  ⏎ Yes. Current code in PR is mostly funny_hash, and I've tested funny_hash with SMHasher. ... [https://gitter.im/crystal-lang/crystal?at=59887f1ac101bc4e3af72c56]
+T 1502117666 23*	rohitpaulk (~rohitpaul@183.83.199.19623) has joined
+T 1502118290 23*	Renich (~Renich@187.246.96.223) has joined
+T 1502118436 18<FromGitter18>	<funny-falcon> And I should correct myself: SipHash13 is slower for short strings (cause its finalizer is heavy weight), and it is slower on 32bit platform (cause it uses 64bit arithmetic). funny32_hash is faster on short strings on any platform, and on 32bit platform for any string. ⏎ There is funny64_hash that uses 64bit integers that is always faster than SipHash13, but it is slower on 32bit platform than 
+T 1502118436 18<FromGitter18>	... funny32_hash. I didn't include it into PR to simplify code.
+T 1502119301 18<FromGitter18>	<fridgerator> @codenoid those tweets are from april
+T 1502119645 24*	Renich has quit (Remote host closed the connection)
+T 1502119694 23*	Renich (~Renich@187.246.96.223) has joined
+T 1502119766 24*	leandrobighetti has quit ()
+T 1502183463 19*	Now talking on 22#crystal-lang
+T 1502183467 22*	Topic for 22#crystal-lang is: The Crystal programming language | http://crystal-lang.org | Crystal 0.23.1 | Fund Crystal's development: http://is.gd/X7PRtI | GH: https://github.com/crystal-lang/crystal | Docs: http://crystal-lang.org/docs/ | API: http://crystal-lang.org/api/ | Gitter: https://gitter.im/crystal-lang/crystal
+T 1502183467 22*	Topic for 22#crystal-lang set by 26RX14 (24Fri Jul 14 00:33:44 2017)
+T 1502184725 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502185228 24*	Ven_ has quit (Ping timeout: 240 seconds)
+T 1502185325 18<FromGitter18>	<andreaTP> One question, in a spec I wanna check the output sent to `STDOUT` but it looks like I cannot mock it, how to do it?
+T 1502185635 23*	w-p (~will@98.122.164.17823) has joined
+T 1502185778 18<FromGitter18>	<lilijreey> @faustinoaq  yes Crstal just a front-end, can by run anywehere. like Kotiln
+T 1502185797 24*	greenbigfrog has quit (Remote host closed the connection)
+T 1502185910 18<FromGitter18>	<lilijreey> @huacnlee  居然看见了一个熟悉的头像
+T 1502186728 18<w-p18>	is it not possible to initialize a class property with setter function from inside the initialize call?
+T 1502186890 24*	bmcginty has quit (Ping timeout: 240 seconds)
+T 1502186941 18<w-p18>	for example: https://play.crystal-lang.org/#/r/2hm0
+T 1502186958 23*	greenbigfrog (Elite14712@gateway/shell/elitebnc/x-fglpehrwdrqobbxr23) has joined
+T 1502186965 18<FromGitter18>	<bew> w-p no you need to explicitly initialize each instance variables in the `initializer`, not in other functions.
+T 1502187002 18<FromGitter18>	<bew> note that when you do `@bar = something` the setter is not called
+T 1502187009 23*	bmcginty (~bmcginty@100.subnet-66-44-204.ellijay.com23) has joined
+T 1502187053 18<w-p18>	so, I can't force the setter to be called during initialization?
+T 1502187098 18<RX1418>	w-p, i think you misunderstand what a setter is
+T 1502187113 18<RX1418>	@bar = bar isn't calling bar= and never will
+T 1502187125 18<RX1418>	because you're setting the instance variable directory
+T 1502187128 18<RX1418>	not calling the setter
+T 1502187140 18<RX1418>	directly*
+T 1502187225 18<w-p18>	https://play.crystal-lang.org/#/r/2hm3
+T 1502187242 18<RX1418>	indeed
+T 1502187243 18<w-p18>	self.bar works but still, only if it the associated variables are initialized
+T 1502187259 18<RX1418>	yes
+T 1502187265 18<w-p18>	so, defaults can't be calculated.
+T 1502187300 18<RX1418>	they can be calculated in the initialize function or in "top-level defaults"
+T 1502187314 18<w-p18>	but not via setters
+T 1502187334 18<RX1418>	no, it doesn't analyse called functions for whether ivars are set
+T 1502187356 18<RX1418>	you must initialise all instance variables before you call the first function in your constructor
+T 1502187361 18<FromGitter18>	<bew> RX14 wut it works, I thought one couldn't init variables in other methods from the initializer Oo
+T 1502187371 18<RX1418>	you can't
+T 1502187404 18<w-p18>	alright. that's fine. now I know. thanks.
+T 1502187442 18<FromGitter18>	<bew> oh no i miss-read the example
+T 1502187469 18<RX1418>	w-p, the problem is that i think there are certain conditions where if you allow what you want to do, you can break the type system
+T 1502187472 18<RX1418>	either that or performance
+T 1502187480 18<w-p18>	in this instance I was trying to use a configuration object with some mappings such that i could associate one value with another without knowning some things
+T 1502187607 23*	DTZUZO_ (~DTZUZO@S0106bcd16584b0aa.vs.shawcable.net23) has joined
+T 1502187636 18<w-p18>	eg: lookup the value of the instance var in a hash where the initialize value is the key - look up that key - set an internal value - etc. 
+T 1502187653 18<w-p18>	without repeating the setter function body
+T 1502188051 23*	Ven (~textual@80.12.27.7423) has joined
+T 1502188075 24*	28Ven is now known as 18Guest80852
+T 1502188147 18<RX1418>	w-p, yeah i guess it's a pain but iirc there's good reasons behind it
+T 1502188163 18<RX1418>	i can't remember exactly what they are however
+T 1502188333 18<w-p18>	that's ok. good to know. thanks again.
+T 1502189286 24*	Guest80852 has quit (Ping timeout: 268 seconds)
+T 1502189866 23*	Papierko- (papierkorb@endless-aerospace.de23) has joined
+T 1502191129 24*	rohitpaulk has quit (Ping timeout: 255 seconds)
+T 1502191583 23*	hightower3 (~hightower@x4e3018bc.dyn.telefonica.de23) has joined
+T 1502191875 24*	olbat[m] has quit (Changing host)
+T 1502191875 23*	olbat[m] (olbatmatri@unaffiliated/olbat23) has joined
+T 1502191875 24*	olbat[m] has quit (Changing host)
+T 1502191875 23*	olbat[m] (olbatmatri@gateway/shell/matrix.org/x-jnbwoaknnoadmyty23) has joined
+T 1502192366 24*	office_boy has quit (Remote host closed the connection)
+T 1502192392 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502192415 23*	Ven (~textual@80.12.33.12723) has joined
+T 1502192439 24*	28Ven is now known as 18Guest12799
+T 1502192641 24*	office_boy has quit (Read error: Connection reset by peer)
+T 1502192797 24*	mark_66 has quit (Read error: Connection reset by peer)
+T 1502192964 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502193010 23*	mark_66 (~petruilie@95.77.97.9123) has joined
+T 1502193217 24*	office_boy has quit (Ping timeout: 248 seconds)
+T 1502193450 24*	w-p has quit (Ping timeout: 240 seconds)
+T 1502193538 23*	william_ (b1138112@gateway/web/freenode/ip.177.19.129.1823) has joined
+T 1502193541 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502193661 24*	office_boy has quit (Read error: Connection reset by peer)
+T 1502193741 23*	tdc_ (~tdc@185.130.25.22523) has joined
+T 1502193808 24*	william_ has quit (Client Quit)
+T 1502193813 24*	mark_66 has quit (Remote host closed the connection)
+T 1502193857 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502193885 23*	tdc__ (~tdc@185.130.25.22523) has joined
+T 1502193937 24*	tdc has quit (Ping timeout: 240 seconds)
+T 1502194096 24*	tdc_ has quit (Ping timeout: 268 seconds)
+T 1502194117 24*	office_boy has quit (Ping timeout: 246 seconds)
+T 1502194176 23*	mark_66 (~petruilie@95.77.97.9123) has joined
+T 1502194430 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502194559 24*	office_boy has quit (Read error: Connection reset by peer)
+T 1502194785 23*	tdc (~tdc@185.130.25.22523) has joined
+T 1502194972 24*	tdc__ has quit (Ping timeout: 260 seconds)
+T 1502195001 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502195130 24*	office_boy has quit (Read error: Connection reset by peer)
+T 1502195316 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502195437 24*	office_boy has quit (Read error: Connection reset by peer)
+T 1502195825 23*	tdc_ (~tdc@185.130.25.22523) has joined
+T 1502195887 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502195983 24*	tdc has quit (Ping timeout: 268 seconds)
+T 1502196128 24*	office_boy has quit (Ping timeout: 240 seconds)
+T 1502196459 23*	office_boy (~office_bo@91.74.29.5723) has joined
+T 1502196506 23*	tdc__ (~tdc@185.130.25.22523) has joined
+T 1502196676 23*	tdc (~tdc@185.130.25.22523) has joined
+T 1502196680 23*	w-p (~will@108-203-1-1.lightspeed.rlghnc.sbcglobal.net23) has joined
+T 1502196688 24*	tdc_ has quit (Ping timeout: 240 seconds)
+T 1502196839 24*	tdc__ has quit (Ping timeout: 258 seconds)
+T 1502196842 24*	ephemera__ has quit (Quit: No Ping reply in 180 seconds.)
+T 1502196932 23*	ephemera_ (~E@175.197.43.16623) has joined
+T 1502196997 24*	tdc has quit (Ping timeout: 240 seconds)
+T 1502197047 18<FromGitter18>	<Sija> @sevk I know, thx anyway! :)
+T 1502197254 23*	tdc (~tdc@185.130.25.22523) has joined
+T 1502200826 23*	paulcsmith_ (~paulcsmit@27.31.108.93.rev.vodafone.pt23) has joined
+T 1502201109 24*	office_boy has quit ()
+T 1502201365 23*	rohitpaulk (~rohitpaul@183.83.199.19623) has joined
+T 1502202357 24*	paulcsmith_ has quit (Quit: Textual IRC Client: www.textualapp.com)
+T 1502202817 24*	Philpax_ has quit (Ping timeout: 240 seconds)
+T 1502203593 24*	snsei has quit (Remote host closed the connection)
+T 1502203760 23*	snsei (~snsei@2601:600:8880:43d0:9100:7471:427:d54423) has joined
+T 1502204090 24*	snsei has quit (Remote host closed the connection)
+T 1502204272 24*	Guest12799 has quit (Ping timeout: 268 seconds)
+T 1502204384 24*	mark_66 has quit (Remote host closed the connection)
+T 1502204514 23*	snsei (~snsei@2601:600:8880:43d0:c174:44d:9d5:e42723) has joined
+T 1502204977 -18crystal-gh/22#crystal-lang-	[13crystal] 15RX14 closed pull request #4808: Implemented Dir.children (06master...06dir-children) 02https://git.io/v76V3
+T 1502206056 23*	Ven (~textual@80.12.43.13723) has joined
+T 1502206080 24*	28Ven is now known as 18Guest99057
+T 1502206121 18<FromGitter18>	<Willamin> What's the best open gl crystal bindings? I see that a few exist and aren't sure which to use
+T 1502206167 18<FromGitter18>	<GetRektByMe> Inb4 stdlib
+T 1502206181 -18travis-ci/22#crystal-lang-	crystal-lang/crystal#020796f (master - Implemented Dir.children (#4808)): The build passed. https://travis-ci.org/crystal-lang/crystal/builds/262290843
+T 1502206182 18<FromGitter18>	<GetRektByMe> Because stdlib has everything from HTTP to OAuth
+T 1502206489 18<FromGitter18>	<Willamin> Are there open gl bindings in the stdlib? I couldn't find them
+T 1502206699 18<FromGitter18>	<bew> @Willamin I suggest you try some of them (the most complete ones), and see which fits you best. There is no official libs for opengl
+T 1502213771 19*	Now talking on 22#crystal-lang
+T 1502213771 22*	Topic for 22#crystal-lang is: The Crystal programming language | http://crystal-lang.org | Crystal 0.23.1 | Fund Crystal's development: http://is.gd/X7PRtI | GH: https://github.com/crystal-lang/crystal | Docs: http://crystal-lang.org/docs/ | API: http://crystal-lang.org/api/ | Gitter: https://gitter.im/crystal-lang/crystal
+T 1502213771 22*	Topic for 22#crystal-lang set by 26RX14 (24Fri Jul 14 00:33:44 2017)
+T 1502213868 23*	Renich (~Renich@187.246.96.223) has joined
+T 1502213897 23*	onionhammer (~Onionhamm@75-161-197-42.mpls.qwest.net23) has joined
+T 1502214677 18<FromGitter18>	<faustinoaq> I notice `ary` is everywhere inside Array.cr (https://github.com/crystal-lang/crystal/blob/4a9b8677504fababe8d87f6d960716ba58f22c7a/src/array.cr#L148) 😄
+T 1502214768 18<FromGitter18>	<faustinoaq> > @faustinoaq  yes Crstal just a front-end, can by run anywehere. like Kotiln ⏎  ⏎ @lilijreey  I think the same 😄
+T 1502214921 24*	Renich has quit (Remote host closed the connection)
+T 1502214933 23*	Ven (~textual@80.12.33.12523) has joined
+T 1502214958 24*	28Ven is now known as 18Guest43717
+T 1502215023 23*	Renich (~Renich@187.246.96.223) has joined
+T 1502215193 23*	rohitpaulk (~rohitpaul@183.83.199.19623) has joined
+T 1502215492 24*	rohitpaulk has quit (Ping timeout: 258 seconds)
+T 1502215494 18<FromGitter18>	<watzon> I want to see a kemal vs iron (https://github.com/iron/iron) benchmark
+T 1502215860 24*	Guest43717 has quit (Ping timeout: 260 seconds)
+T 1502216099 18<FromGitter18>	<eliasjpr> @watzon take a look at https://www.techempower.com/benchmarks/
+T 1502216365 23*	rohitpaulk (~rohitpaul@183.83.199.19623) has joined
+T 1502216683 23*	sz0 (uid110435@gateway/web/irccloud.com/x-hezduqiiqrbfwyxt23) has joined
+T 1502216743 18<FromGitter18>	<watzon> Lol @eliasjpr the kemal one is one of the few that has no results and over 1000 errors
+T 1502217073 24*	rohitpaulk has quit (Ping timeout: 268 seconds)
+T 1502217123 18<FromGitter18>	<fridgerator> you can look at the round 15 preview: https://www.techempower.com/benchmarks/previews/round15/
+T 1502217170 23*	Ven_ (~textual@80.12.38.2023) has joined
+T 1502217173 18<FromGitter18>	<fridgerator> even here, i'm sure changes have been made that aren't reflected yet
+T 1502217245 18<FromGitter18>	<renich> good day, Crystalians
+T 1502217748 18<FromGitter18>	<renich> I need help with something: say, you have a JSON::Mapping object and one of the instance variables is nilable or string. How can you test for that? I tried `if my_map.thing.nil_ ...` and it doesn't work
+T 1502217767 18<FromGitter18>	<renich> also tried `if my_map.thing` and it doesn't work either.
+T 1502217849 18<FromGitter18>	<renich>  (https://files.gitter.im/crystal-lang/crystal/yBZb/image.png)
+T 1502218319 18<FromGitter18>	<fridgerator> use `if thing = my_map.thing` `thing.to_f64`
+T 1502218325 24*	Ven_ has quit (Ping timeout: 240 seconds)
+T 1502218334 18<FromGitter18>	<renich> @fridgerator  will try that
+T 1502218350 24*	alibby1 has quit (Ping timeout: 240 seconds)
+T 1502218361 23*	alibby (~Adium@c-69-249-113-3.hsd1.pa.comcast.net23) has joined
+T 1502218407 18<FromGitter18>	<fridgerator> either that, or `my_map.thing.not_nil!.to_f64`
+T 1502218462 18<FromGitter18>	<renich> @fridgerator  that seems to work (first one). I try to avoid the second one. Thanks a lot!
+T 1502218474 23*	Ven (~textual@80.12.34.3123) has joined
+T 1502218499 24*	28Ven is now known as 18Guest91583
+T 1502218535 18<FromGitter18>	<fridgerator> JSON::Any also defines `as_` methods: https://crystal-lang.org/api/0.23.1/JSON/Any.html
+T 1502218548 18<FromGitter18>	<fridgerator> you might be able to do `thing = my_map.thing.as_f64?`
+T 1502218568 18<FromGitter18>	<fridgerator> I guess it just `as_f?` for 64
+T 1502218938 18<oprypin18>	fridgerator, what are you even talking about, this is json mapping
+T 1502218952 18<FromGitter18>	<fridgerator> calm down
+T 1502218961 18<oprypin18>	`if thing = my_map.thing` was a good suggestion, all that's needed
+T 1502218976 18<FromGitter18>	<fridgerator> chill out br
+T 1502218978 18<FromGitter18>	<fridgerator> o
+T 1502219015 18<FromGitter18>	<eliasjpr> @watzon sorry I meant to send you the latest test results, have to update my nookmarked url
+T 1502219213 18<FromGitter18>	<eliasjpr> iron	365,576
+T 1502219237 18<FromGitter18>	<eliasjpr> kemal (postgresql)	164,771 (note db)
+T 1502219252 18<FromGitter18>	<eliasjpr> crystal	394,246
+T 1502219261 18<FromGitter18>	<watzon> So iron is a bit faster than kemal then
+T 1502219270 18<FromGitter18>	<watzon> But strait Crystal is blazin
+T 1502219274 18<FromGitter18>	<eliasjpr> kemal is making db requests
+T 1502219283 18<FromGitter18>	<watzon> True
+T 1502219302 18<FromGitter18>	<eliasjpr> Look at the plain text results
+T 1502219316 18<FromGitter18>	<eliasjpr> crystal	2,180,410 ⏎ iron	240,876
+T 1502219325 18<FromGitter18>	<eliasjpr> kemal (postgresql)	113,694
+T 1502219352 18<FromGitter18>	<eliasjpr> ¯\_(ツ)_/¯
+T 1502219402 24*	tdc has quit (Ping timeout: 258 seconds)
+T 1502219414 18<FromGitter18>	<eliasjpr> @fridgerator did we submitted a fix for kemal? I think we did. We have to wait for the next batch of results
+T 1502219448 18<FromGitter18>	<fridgerator> yeah there has been a few fixes, hard to keep track of them and if they have run or not
+T 1502219510 18<FromGitter18>	<eliasjpr> @watzon you can run the test in your environment if you like see the TEFB repo https://github.com/TechEmpower/FrameworkBenchmarks
+T 1502219543 18<FromGitter18>	<watzon> Awesome stuff :) thanks
+T 1502219820 24*	28Guest91583 is now known as 18Ven``
+T 1502220009 18<FromGitter18>	<watzon> Hey @faustinoaq does your crystal vscode extension allow you to set a path for the crystal binary?
+T 1502221908 24*	Ven`` has quit (Ping timeout: 240 seconds)
+T 1502222467 23*	Ven (~textual@80.12.33.3323) has joined
+T 1502222490 24*	28Ven is now known as 18Guest83286
+T 1502223907 24*	alibby has quit (Ping timeout: 240 seconds)
+T 1502225178 18<xiljin18>	numbers and benchmarks aside, I couldn't be happier with the performance I'm getting from a small kemal app with an sqlite backend .. the fact that it's hardly using any system resources is a nice bonus as well
+T 1502225482 18<Papierkorb18>	I think that most crystal code runs much much faster than it has any right to. Not from a ruby POV ("Wow this is fast"), but compared to "fast" languages like C or Rust.
+T 1502225603 18<Papierkorb18>	I say this as to get this kind of overall performance, you'd usually have to know much more (As in: C or Rust). You still can go even faster in say C, but for what price? If the GC isn't hitting you, you're probably not going to have real issues ;)
+T 1502225765 18<FromGitter18>	<watzon> Agree 💯
+T 1502225807 18<FromGitter18>	<watzon> Does Crystal have anything like C's fscanf (https://www.tutorialspoint.com/c_standard_library/c_function_fscanf.htm) built in yet?
+T 1502225840 18<oprypin18>	why tho
+T 1502225896 18<FromGitter18>	<watzon> Because it's a really handy way to take a string, pattern match parts of it, and turn it into an array
+T 1502225905 18<oprypin18>	that's a regex
+T 1502225912 18<Papierkorb18>	Not really
+T 1502225913 18<FromGitter18>	<watzon> I found String.scan (http://devdocs.io/crystal/api/0.23.0/string#scan(pattern:String)-instance-method), but the docs are kinda sparse
+T 1502225924 18<Papierkorb18>	watzon, you can use StringScanner. Not exactly the same, but ..
+T 1502226070 18<oprypin18>	C and C++ input functions are completely disjoint from reality. they expect everything to be space separated and treat newlines the same as space?
+T 1502226083 18<Papierkorb18>	oprypin: A type-safe version of a scanf like function would be kinda neat.
+T 1502226122 18<oprypin18>	pls no percent nonsense
+T 1502226135 18<Papierkorb18>	no one said percent-string
+T 1502226175 18<FromGitter18>	<watzon> Papierkorb: I agree, a typesafe version would be great
+T 1502226202 18<FromGitter18>	<watzon> But how to go about implimenting that, I don't know
+T 1502226205 18<hightower318>	Is there a __something__ which expands into filename or dirname where the current file resides?
+T 1502226222 18<hightower318>	(not __FILE__ which points to a temp location if it's a script)
+T 1502226225 18<oprypin18>	we've had this brought up
+T 1502226232 18<FromGitter18>	<watzon> Something like `pwd`?
+T 1502226249 18<FromGitter18>	<watzon> Or `__DIR__` in Python, or whatever it is
+T 1502226255 18<oprypin18>	hightower3, what's the "current file" tho?
+T 1502226287 18<oprypin18>	not sure what you mean "if it's a script" and what "current file" there would be in that case
+T 1502226306 18<hightower318>	oprypin, yeah, good question :)
+T 1502227815 18<FromGitter18>	<watzon> Got tired of wrapping procps because of it's lack of documentation and because C sucks, so I'm attempting to rewrite it in Crystal
+T 1502227818 18<FromGitter18>	<watzon> :D
+T 1502227846 18<FromGitter18>	<watzon> Who here knew about all the wonders that the `/proc` directory holds?
+T 1502228090 23*	Renich[m] (renichmatr@gateway/shell/matrix.org/x-rkvbrqeorvnpwamh23) has joined
+T 1502228111 18<Papierkorb18>	watzon, proc(5)
+T 1502228129 23*	gloscombe (~gloscombe@cpc87807-haye26-2-0-cust214.17-4.cable.virginm.net23) has joined
+T 1502228144 18<FromGitter18>	<watzon> Papierkorb: that's the one
+T 1502228158 18<FromGitter18>	<watzon> Never touched it before now
+T 1502228206 24*	gloscombe has quit (Client Quit)
+T 1502228293 18<Renich[m]18>	guys, heard of riot? riot.im
+T 1502228349 18<Papierkorb18>	<Insert obligatory XKCD reference here>
+T 1502228370 18<FromGitter18>	<watzon> I have, but I've never used it
+T 1502228400 18<Renich[m]18>	I just learned of it. It seems interesting. The next IRC. Freenode supports it already
+T 1502228406 18<Renich[m]18>	pretty much like gitter
+T 1502228419 18<Renich[m]18>	but with end-to-end encryption
+T 1502228445 18<Papierkorb18>	end-to-end in a public chat room. yeah.
+T 1502228499 24*	Renich has quit (Remote host closed the connection)
+T 1502228523 18<oprypin18>	so all the disadvantages of IRC in a silly web interface?  SeemsGood
+T 1502228688 23*	Renich (~Renich@187.246.96.223) has joined
+T 1502228700 24*	Renich has quit (Client Quit)
+T 1502228849 23*	watzon[m] (watzonmatr@gateway/shell/matrix.org/x-bsjgaulhhehlugpf23) has joined
+T 1502228977 18<watzon[m]18>	Testing it out now
+T 1502228980 23*	leandrobighetti (~leandrobi@2a02:8109:8b40:ce1:b4f2:4b2b:280:2d6b23) has joined
+T 1502229001 18<Papierkorb18>	... why does it add a [m] at the end of the nick?
+T 1502229070 18<watzon[m]18>	I think it's do differentiate between IRC and Riot
+T 1502229071 18<watzon[m]18>	Idk
+T 1502229110 18<Papierkorb18>	m(
+T 1502229216 18<watzon[m]18>	It stands for matrix I guess
+T 1502229631 24*	28watzon[m] is now known as 18watzon
+T 1502229758 18<watzon18>	Figured it out, it's what riot adds when you haven't identified a nick
+T 1502229786 18<watzon18>	Now that I've identified with NickServ I don't have the [m] anymore
+T 1502229932 23*	Giphy[m] (nebgiphyma@gateway/shell/matrix.org/x-opikvhxtohvvaeuw23) has joined
+T 1502230550 24*	leandrobighetti (~leandrobi@2a02:8109:8b40:ce1:b4f2:4b2b:280:2d6b24) has left
+T 1502230914 18<hightower318>	Hey, quick one (I'm not seeing a tree from the wood). I have obj with property "x", and I need to access obj.x, but the value "x" is stored in a variable. How do I do that? (E.g. something like obj.get(x))
+T 1502230927 18<hightower318>	obj.get(variable) I mean
+T 1502230965 18<watzon18>	`obj[variable]` doesn't work?
+T 1502230974 18<oprypin18>	hightower3, you cannot do that, not without perparation for it
+T 1502231001 18<hightower318>	watzon, no, since it's a property
+T 1502231009 18<watzon18>	Ahh of course
+T 1502231010 24*	Guest83286 has quit (Ping timeout: 240 seconds)
+T 1502231012 18<oprypin18>	hightower3, it all comes down to making a method with   case "x"; return x;
+T 1502231038 18<hightower318>	oprypin, right, just thought about that. Ok, thanks.
+T 1502231053 18<oprypin18>	you can automate that but it's not clean
+T 1502231087 18<hightower318>	no need, just have one occurrence
+T 1502231787 18<RX1418>	oprypin, if it gets people off gitter i have no problems with matrix lol
+T 1502231792 18<RX1418>	at least the bridge is "native"
+T 1502231842 18<watzon18>	True that
+T 1502231855 18<watzon18>	Not a fan of Gitter? Lol
+T 1502232027 18<RX1418>	well its not too bad
+T 1502232033 18<RX1418>	but the bridge is a pain
+T 1502232047 18<RX1418>	the problem with it is that it's not compatible
+T 1502232057 18<FromGitter18>	<faustinoaq> @watzon I read your comment and added it! 😄  https://github.com/faustinoaq/vscode-crystal-lang#310-compiler
+T 1502232061 18<watzon18>	True. I like that riot has syntax highlighting built in too
+T 1502232079 18<watzon18>	@faustinoaq you are amazing!
+T 1502232083 18<RX1418>	how do code blocks work even
+T 1502232092 18<RX1418>	over irc
+T 1502232115 18<watzon18>	!giphy yay
+T 1502232116 18*	Giphy[m] uploaded an image: yay-balloon-whoo-l2SqiOMQxG82Gto4M (1269KB) <https://matrix.org/_matrix/media/v1/download/matrix.org/xCZUNFbfRfRsDiAjOGGrwqHL>
+T 1502232130 18<RX1418>	oh jesus
+T 1502232134 18<RX1418>	can we not
+T 1502232137 18<Papierkorb18>	^
+T 1502232138 18<watzon18>	What do you mean RX14?
+T 1502232141 18<watzon18>	Lol
+T 1502232148 18<RX1418>	1 bot please
+T 1502232152 18<FromGitter18>	<faustinoaq> Also latest version shows more info about symbols ✨
+T 1502232155 18<FromGitter18>	<faustinoaq> ((https://i.imgur.com/wvZyoMf.gif))
+T 1502232175 18<RX1418>	>> "foo"
+T 1502232180 18<RX1418>	is that bot rip?
+T 1502232188 18<watzon18>	Awesome :D
+T 1502232196 24*	Giphy[m] (nebgiphyma@gateway/shell/matrix.org/x-opikvhxtohvvaeuw24) has left ("User left")
+T 1502232217 18<watzon18>	The giphy bot has left the scene
+T 1502232293 18<oprypin18>	RX14, yeah bot has been absent from this channel for a long time
+T 1502232312 18<RX1418>	im sure it was there a bit ago
+T 1502232355 18<oprypin18>	RX14, im counting 10-20 days
+T 1502232357 18<FromGitter18>	<faustinoaq> Still a lot of work to do with Scry, macros and completion, but at least the extension is good enough to work with Amber and Kemal.
+T 1502232376 18<RX1418>	yeah sounds right oprypin 
+T 1502232730 23*	Philpax_ (~Philpax@ppp118-209-209-174.bras2.mel11.internode.on.net23) has joined
+T 1502233057 24*	sz0 has quit (Quit: Connection closed for inactivity)
+T 1502233105 18<FromGitter18>	<codenoid> ✨ https://s1.postimg.org/94yxhl01b/crystalshards.png
+T 1502233292 18<watzon18>	So it is using kemal or cowboy?
+T 1502233295 18<watzon18>	Haha
+T 1502463519 19*	Now talking on 22#crystal-lang
+T 1502463520 22*	Topic for 22#crystal-lang is: The Crystal programming language | http://crystal-lang.org | Crystal 0.23.1 | Fund Crystal's development: http://is.gd/X7PRtI | GH: https://github.com/crystal-lang/crystal | Docs: http://crystal-lang.org/docs/ | API: http://crystal-lang.org/api/ | Gitter: https://gitter.im/crystal-lang/crystal
+T 1502463520 22*	Topic for 22#crystal-lang set by 26RX14 (24Fri Jul 14 00:33:44 2017)
+T 1502463786 23*	beardedeagle (~beardedea@64.202.161.5723) has joined
+T 1502463839 18<FromGitter18>	<bararchy> So, having issues connecting to local IIS server with HTTP::Client, the certificate is invalid , so I overload the `tls: ` with a new context using verify none. ⏎ using curl on https works, using TTP::Client on non ssl works, using HTTP::Client on ssl with new context fails after a minute or so with the message: ⏎  ⏎ ```code paste, see link``` [https://gitter.im/c
+T 1502463839 18<FromGitter18>	... rystal-lang/crystal?at=598dc75e2723db8d5e957956]
+T 1502464067 18<FromGitter18>	<bararchy> Using only SSL connection via: SSL Socket also works, so I guess the issue is somwhere with the HTTP::Client and not the SSL socket it self
+T 1502464872 23*	snsei (~snsei@2601:600:8880:43d0:2c55:66b:67c2:9bb423) has joined
+T 1502466025 24*	mark_66 has quit (Remote host closed the connection)
+T 1502467498 18<FromGitter18>	<fridgerator> anyone available to help with questions binding to a c library?  specifically this function: http://www.unidata.ucar.edu/software/netcdf/netcdf-4/newdocs/netcdf-c/nc_005finq_005fvarids.html
+T 1502467525 18<FromGitter18>	<fridgerator> here is my function binding: https://github.com/fridgerator/netcdfcr/blob/master/src/lib_netcdf.cr#L79
+T 1502467588 18<FromGitter18>	<fridgerator> ```code paste, see link``` [https://gitter.im/crystal-lang/crystal?at=598dd60476a757f8089611ff]
+T 1502467611 18<FromGitter18>	<fridgerator> I expect varids to return an array of values, but its empty
+T 1502467751 18<FromGitter18>	<bew> Can you print `numvars` after the lib call?
+T 1502467773 18<FromGitter18>	<fridgerator> it remains 24
+T 1502467833 18<FromGitter18>	<fridgerator> same code in the python implementation : https://github.com/Unidata/netcdf4-python/blob/master/netCDF4/_netCDF4.pyx#L1445
+T 1502467872 18<FromGitter18>	<fridgerator> This is my first C library binding, so I'm not even sure I'm creating  / passing `varids` corretctly
+T 1502468046 18<watzon18>	fridgerator: have to taken at crystal_lib yet? https://github.com/crystal-lang/crystal_lib
+T 1502468056 18<watzon18>	It's not perfect, but it's a good way to get things started
+T 1502468071 18<FromGitter18>	<fridgerator> thats what I used to generate my libncdf.cr file, worked great
+T 1502468136 18<FromGitter18>	<bew> You can remove the `to_unsafe`, and I think you don't need the sizeof too, it'll be done by the array constructor
+T 1502468283 18<FromGitter18>	<fridgerator> it works without those, gives the same result, an empty array
+T 1502468379 18<FromGitter18>	<bew> If you init numvars to 0, what does it prints after the call?
+T 1502468409 18<FromGitter18>	<fridgerator> goes back to 0
+T 1502468430 18<FromGitter18>	<fridgerator> i'm getting it from another function call though: `LibNetcdf4.nc_inq_nvars(@ncid, out numvars)`
+T 1502468435 18<FromGitter18>	<bew> (the value should be updated, as stated in the documentation i think..)
+T 1502468457 18<FromGitter18>	<fridgerator> sorry updated my response, it goes back to 24
+T 1502468582 18<FromGitter18>	<fridgerator> pushed my code to a branch: https://github.com/fridgerator/netcdfcr/blob/data_structures/src/netcdf/nc_file.cr#L60

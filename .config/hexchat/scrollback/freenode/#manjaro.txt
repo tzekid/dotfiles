@@ -1,0 +1,11 @@
+T 1499452009 19*	Now talking on 22#manjaro
+T 1499452009 22*	Topic for 22#manjaro is: Welcome to the official Manjaro Linux IRC channel. If you are experiencing a problem, please state the problem rather than asking if anyone can help. | Channel logs: http://echelog.com/?manjaro | www.manjaro.org - wiki.manjaro.org  | 17.0 Gellivara has been released | use #manjaro-talk for offtopic | The previous Luks error has been fixed.
+T 1499452009 22*	Topic for 22#manjaro set by 26dodgejcr!~dodgejcr@unaffiliated/dodgejcr (24Tue Apr 11 04:47:25 2017)
+T 1499452010 -18ChanServ-	[#manjaro] Crypt luks error look at conversation philm: http://echelog.com/logs/browse/manjaro/1456009200   or http://bit.ly/1Qbsr99
+T 1499452010 22*	Channel 22#manjaro url: 24www.manjaro.org/blog
+T 1499452066 24*	Fooguo has quit (Remote host closed the connection)
+T 1499452178 19*	Now talking on 22#manjaro
+T 1499452178 22*	Topic for 22#manjaro is: Welcome to the official Manjaro Linux IRC channel. If you are experiencing a problem, please state the problem rather than asking if anyone can help. | Channel logs: http://echelog.com/?manjaro | www.manjaro.org - wiki.manjaro.org  | 17.0 Gellivara has been released | use #manjaro-talk for offtopic | The previous Luks error has been fixed.
+T 1499452178 22*	Topic for 22#manjaro set by 26dodgejcr!~dodgejcr@unaffiliated/dodgejcr (24Tue Apr 11 04:47:25 2017)
+T 1499452179 -18ChanServ-	[#manjaro] Crypt luks error look at conversation philm: http://echelog.com/logs/browse/manjaro/1456009200   or http://bit.ly/1Qbsr99
+T 1499452179 22*	Channel 22#manjaro url: 24www.manjaro.org/blog
