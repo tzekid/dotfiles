@@ -1,40 +1,28 @@
-# ARCH version of my .zshrc
 export ZSH=/home/tzekid/.oh-my-zsh
-
-# ZSH_THEME="agnoster"
 ZSH_THEME="bullet-train"
-
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man-pages z wd)
-DEFAULT_USER='tzekid'
+plugins=(git colored-man-pages z wd zsh-completions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+DEFAULT_USER='tzekid'
 BULLETTRAIN_CONTEXT_DEFAULT_USER=tzekid
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Bullet-train zsh.theme
 BULLETTRAIN_STATUS_EXIT_SHOW=true
 BULLETTRAIN_DIR_BG=red
 BULLETTRAIN_PROMPT_CHAR=λ
-# Lambda is gaben
-# Lambda is life
+
+
 BULLETTRAIN_STATUS_BG=blue
 BULLETTRAIN_RUBY_SHOW=false
 
-
-### ALIASES ###
-# Sudo
 alias fucking='fuck'
 alias please='fuck'
 
-# Globals
 thisMonth=$(date +%Y-%m_%B)
 lastMonth=$(date -d "last month" +%Y-%m_%B)
 alias tomorrow='date -d tomorrow +%F'
 alias today='date +%F' # yyyy-mm-dd
 alias yesterday='date -d yesterday +%F' # yyyy-mm-dd
 alias now='date +%H:%M' # hh:mm
+
 
 alias battery="upower -i $(upower -e | grep 'BAT') | grep -E \"state|to\ full|percentage\""
 
@@ -43,12 +31,14 @@ pipi() {
     pip3 install "$1"
 }
 
+
 alias die_please='pkill -9 -f'
 alias please_die='pkill -9 -f'
 # refresh font cache
 alias rfc='fc-cache -fv'
 # Scripts
 alias dma='~/scripts/disableMouseAcc.sh'
+
 
 # Neat stuff
 alias ccat='pygmentize -g -O style=colorful,lineos=1'
@@ -65,6 +55,10 @@ alias pe='micro ~/.profile'
 # System
 alias sdi='sudo -S dpkg -i'
 alias i='sudo -S pacman -S --needed'
+install-all() {
+    echo Looking for $1
+    pacman -Ssq $1 | grep $1 | sudo xargs pacman -S --needed
+}; alias i-all='install-all'
 alias iu='sudo -S pacman -U'
 alias r='sudo -S pacman -R'
 alias u='sudo -S pacman -Syu --noconfirm'
@@ -76,11 +70,13 @@ alias ssn='sudo shutdown now'
 alias srn='sudo shutdown -r now'
 alias sb='subl'
 
+alias free_pacman="sudo rm -rf /var/lib/pacman/db.lck"
+
 # Github
 lazygit() {
-	git add .
-	git commit -a -m "$1"
-	git push
+  git add .
+  git commit -a -m "$1"
+  git push
 }; alias lg=lazygit
 
 github_clone() {
@@ -106,7 +102,7 @@ alias sbi='sudo -S brew install'
 # Network & co.
 alias slr='sudo /opt/lampp/lampp restart'
 alias pms='python -m http.server'
-alias cip='curl -s ipecho.net/plain'
+alias cip='curl -s ipecho.net/plain; echo'
 alias wht='webhttrack'
 tzsh() {
   echo "Your IP was: $(curl -s ipecho.net/plain)"
@@ -114,18 +110,18 @@ tzsh() {
   torify zsh
   echo "\nBye bye"
   echo "Your IP is: $(curl -s ipecho.net/plain)"
-}
+} # SETUP TOR | TORSOCKS FIRST !!! 
 
 # Ruby
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # source ~/.rvm/scripts/rvm
 
 #Linuxbrew
-export PATH="/home/tzekid/.linuxbrew/bin:$PATH"
+export PATH="/home/tzekid/.linuxbrew/bin:/home/tzekid/.perl6/bin:/home/tzekid/bin/perl/:$PATH"
 export MANPATH="/home/tzekid/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/tzekid/.linuxbrew/share/info:$INFOPATH"
 # Syntax highlightling
-source /home/tzekid/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/tzekid/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Exercism &co.
 export PATH=$HOME/binz:$PATH
@@ -148,6 +144,7 @@ alias m='micro'
 alias mb='micro ~/.config/micro/bindings.json'
 alias mo='micro ~/.config/micro/settings.json'
 
+source $HOME/.cargo/env
 # Rust
 alias irn='curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly'
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
@@ -162,36 +159,39 @@ alias gcg='google-chrome --disable-gpu'
 alias c='code'
 alias c.='code .'
 
+# Sublime
+alias s='subl'
+alias s.='subl .'
+# VSC -> Sublime
+# alias c='subl'
+# alias c.='subl .'
+
 # Curl
 alias clo='curl -L -O'export PATH="/home/tzekid/.linuxbrew/bin:$PATH"
 export MANPATH="/home/tzekid/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/tzekid/.linuxbrew/share/info:$INFOPATH"
 
 # Taskwarrior
-alias t='clear;task next'
+# alias t='clear;task next'
 
 # Crystal
-#export CRYSTAL_BIN='/home/tzekid/Downloads/git/crystal-stuff/crystal/.build/crystal'
-#export PATH=$PATH:/home/tzekid/Downloads/git/crystal-stuff/crystal/.build
-#alias crystal='/home/tzekid/Downloads/git/crystal-stuff/crystal/.build/crystal'
 alias cr='crystal'
 alias crd='crystal deps'
 alias crz='crystal docs'
 alias cre='crystal eval'
 alias crs='crystal spec'
 alias crb='crystal build --release'
-# alias crn='~/Downloads/git/crystal/bin/crystal'
-# alias cr='~/Downloads/git/crystal/bin/crystal'
 
 # Atom
-alias atom='atom-beta --disable-gpu'
+# alias atom='atom-beta --disable-gpu'
 
-fpath+=~/.zfunc
+# ??? NVIDIA ???
+# fpath+=~/.zfunc
 
-# Rust
-source $HOME/.cargo/env
 
 alias cz='code ~/.zshrc'
+# alias cz='subl ~/.zshrc'
+alias sz='subl ~/.zshrc'
 alias y='yaourt'
 alias yns='yaourt -S --noconfirm'
 
@@ -215,7 +215,7 @@ alias x='chmod a+x'
 swap_to_memory() {
   echo "This may take a while ..."
   sudo swapoff -a
-  sudo swapon /dev/sda5 # where sdaX -> linuxswap partition
+  sudo swapon -a
   echo "done!"
 }; alias stm='swap_to_memory'
 
@@ -229,12 +229,6 @@ _/  |_________ ____ |  | _|__| __| _/
  |  |  /  __/\  ___/|    <|  / /_/ | 
  |__| /_____ \\\\\___  >__|_ \__\____ | 
             \/    \/     \/       \/ "
-
-### Hi, kid
-# hi() {
-#   taime=$(date +"%H")
-#   if $taime < 
-# }
 
 # Wget w/ redirect
 alias wgetr='wget --user-agent=Mozilla --content-disposition -E -c '
@@ -260,7 +254,6 @@ get_and_build() {
   cd $1
   makepkg --skipinteg -s
 }; alias gab='get_and_build'
-# export WINEARCH=win32
 
 
 ### AUTOMATE THE AUR BUILD PROCESS
@@ -299,6 +292,7 @@ export vblank_mode=0
 string_to_snakecase() {
   # python -c "print( '_'.join( \"$1\".lower().split() ) )"
   crystal eval "puts (\"$1\").downcase.gsub(' ', '_')"
+  #!TODO perl6 version
 }; alias sts='string_to_snakecase'
 
 filename_to_snakecase() {
@@ -312,8 +306,6 @@ cheat_engine() {
   disown
 }; alias ce='wine "/home/tzekid/.wine/drive_c/Program Files/Cheat Engine 6.6/Cheat Engine.exe"'
 
-# export WINEARCH=win32
-# export WINEPREFIX="/home/tzekid/.wine"
 
 # click_to_pid
 alias ctp="xprop _NET_WM_PID | cut -d' ' -f3"
@@ -339,10 +331,13 @@ export CAKEROOT=$HOME/.cake
 export PATH=$PATH:$CAKEROOT/bin
 
 # Forgot from where dis one be ...
-eval "$(vg eval --shell zsh)"
-
-# Radukobrew @ perl6
-eval "$(/home/tzekid/.rakudobrew/bin/rakudobrew init -)"
+# eval "$(vg eval --shell zsh)"
 
 alias play='vblank_mode=0 primusrun '
 alias game='vblank_mode=0 primusrun '
+
+alias ipv4='curl https://ipv4.wtfismyip.com/text'
+
+alias lampp='/opt/lampp/lampp'
+
+export WINEARCH=win64
