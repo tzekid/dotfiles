@@ -1,17 +1,105 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
 export ZSH=/home/tzekid/.oh-my-zsh
-ZSH_THEME="bullet-train"
-plugins=(git colored-man-pages z wd zsh-completions zsh-syntax-highlighting)
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  tmuxinator
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-completions
+  z
+)
+
 source $ZSH/oh-my-zsh.sh
-DEFAULT_USER='tzekid'
-BULLETTRAIN_CONTEXT_DEFAULT_USER=tzekid
 
-BULLETTRAIN_STATUS_EXIT_SHOW=true
-BULLETTRAIN_DIR_BG=red
-BULLETTRAIN_PROMPT_CHAR=λ
+# User configuration
 
+# export MANPATH="/usr/local/man:$MANPATH"
 
-BULLETTRAIN_STATUS_BG=blue
-BULLETTRAIN_RUBY_SHOW=false
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+###########################
 
 alias fucking='fuck'
 alias please='fuck'
@@ -112,24 +200,6 @@ tzsh() {
   echo "Your IP is: $(curl -s ipecho.net/plain)"
 } # SETUP TOR | TORSOCKS FIRST !!! 
 
-# Ruby
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# source ~/.rvm/scripts/rvm
-
-#Linuxbrew
-export PATH="/home/tzekid/.linuxbrew/bin:/home/tzekid/.perl6/bin:/home/tzekid/bin/perl/:$PATH"
-export MANPATH="/home/tzekid/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/tzekid/.linuxbrew/share/info:$INFOPATH"
-# Syntax highlightling
-# source /home/tzekid/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Exercism &co.
-export PATH=$HOME/binz:$PATH
-
-# Miniconda
-export PATH="/home/tzekid/binz/miniconda3/bin:/home/tzekid/Downloads/git/Nim/bin
-:$PATH"
-
 # Golang
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/gopath
@@ -144,7 +214,6 @@ alias m='micro'
 alias mb='micro ~/.config/micro/bindings.json'
 alias mo='micro ~/.config/micro/settings.json'
 
-source $HOME/.cargo/env
 # Rust
 alias irn='curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly'
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
@@ -162,9 +231,6 @@ alias c.='code .'
 # Sublime
 alias s='subl'
 alias s.='subl .'
-# VSC -> Sublime
-# alias c='subl'
-# alias c.='subl .'
 
 # Curl
 alias clo='curl -L -O'export PATH="/home/tzekid/.linuxbrew/bin:$PATH"
@@ -182,32 +248,11 @@ alias cre='crystal eval'
 alias crs='crystal spec'
 alias crb='crystal build --release'
 
-# Atom
-# alias atom='atom-beta --disable-gpu'
-
-# ??? NVIDIA ???
-# fpath+=~/.zfunc
-
-
 alias cz='code ~/.zshrc'
-# alias cz='subl ~/.zshrc'
 alias sz='subl ~/.zshrc'
 alias y='yaourt'
 alias yns='yaourt -S --noconfirm'
-
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
-GEM_PATH=$GEM_HOME
-export PATH=$PATH:$GEM_HOME/bin
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-
 alias kW="killall WhatsApp;echo WhatsApp\'z dead"
-
-# Twitter vars
-export TWITTER_CONSUMER_KEY="RmuPIaiAiuSdmL7SSv5phdevj"
-export TWITTER_CONSUMER_SECRET="nt8uIDtEf4o1QXHCFmmaBPiC0bFRjNS2uKeHU8abyeBDeX2zQ6"
-export TWITTER_ACCESS_TOKEN="2378268811-MBVnJHwTT5Cm0juiRbzDKjU0KSspRfFsGOfn1al"
-export TWITTER_ACCESS_TOKEN_SECRET="mX3afFWrHUaOacd0v6HVz65IvsGrMJoKX7ku0wJwkLA2d"
 
 alias x='chmod a+x'
 
@@ -252,7 +297,7 @@ get_and_build() {
   tar xvzf "$1.tar.gz"
   rm "$1.tar.gz"
   cd $1
-  makepkg --skipinteg -s
+  makepkg --skipinteg -isr
 }; alias gab='get_and_build'
 
 
@@ -292,7 +337,7 @@ export vblank_mode=0
 string_to_snakecase() {
   # python -c "print( '_'.join( \"$1\".lower().split() ) )"
   crystal eval "puts (\"$1\").downcase.gsub(' ', '_')"
-  #!TODO perl6 version
+  #!TODO nim version
 }; alias sts='string_to_snakecase'
 
 filename_to_snakecase() {
@@ -309,16 +354,8 @@ cheat_engine() {
 
 # click_to_pid
 alias ctp="xprop _NET_WM_PID | cut -d' ' -f3"
-
 alias open='xdg-open'
-
 alias wake_up='vlc ~/Videos/cocaine.mp4'
-
-export XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/
-
-export LIBRARY_PATH=/home/tzekid/Downloads/aur/crsfml/voidcsfml/lib
-export LD_LIBRARY_PATH="$LIBRARY_PATH"
-
 alias whereami='echo "$(curl ipinfo.io 2>/dev/null)\n"'
 
 # Cake
@@ -341,3 +378,6 @@ alias ipv4='curl https://ipv4.wtfismyip.com/text'
 alias lampp='/opt/lampp/lampp'
 
 export WINEARCH=win64
+
+# alias vim="nvim"
+alias nv="nvim"
